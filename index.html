@@ -3,37 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="医哲未来人工智能研究院 (IMPF-AI) - 专注于可信医疗AI、虚拟细胞模拟与数字生命探索的前沿研究机构。">
     <title>医哲未来人工智能研究院 | IMPF-AI Institute</title>
+    <meta name="description" content="医哲未来人工智能研究院（IMPF-AI Institute）专注可信医疗AI：去敏医疗数据与隐私计算、虚拟细胞与人工线粒体仿真、数字器官与医疗AI智能体，并开源医疗模型与 OpenMedicalGym 评测环境。">
 
     <!-- Google Search Console site verification -->
     <meta name="google-site-verification" content="goEXp3PAaw2m8qcaBgjnacF-o9CMBRRtq5_Lydpao8M" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 网站图标 (浏览器标签页 / 书签 / 手机主屏) -->
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#050b14">
+    <meta name="color-scheme" content="dark">
 
-    <!-- Three.js & Vanta.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
+    <!-- 分享卡片 & 搜索引擎 (启用 HTTPS 后把 http:// 改为 https://) -->
+    <link rel="canonical" href="http://impf.ai/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IMPF-AI Institute">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:url" content="http://impf.ai/">
+    <meta property="og:title" content="医哲未来人工智能研究院 | IMPF-AI Institute">
+    <meta property="og:description" content="可信医疗AI · 虚拟细胞与人工线粒体仿真 · 数字器官 · 医疗AI智能体">
+    <meta property="og:image" content="http://impf.ai/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="IMPF-AI 医哲未来人工智能研究院">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="医哲未来人工智能研究院 | IMPF-AI Institute">
+    <meta name="twitter:description" content="可信医疗AI · 虚拟细胞与人工线粒体仿真 · 数字器官 · 医疗AI智能体">
+    <meta name="twitter:image" content="http://impf.ai/og-image.png">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "name": "医哲未来人工智能研究院",
+        "alternateName": ["IMPF-AI Institute", "IMPF-AI", "Institute of Medical Philosophy & Future AI"],
+        "url": "http://impf.ai/",
+        "logo": "http://impf.ai/icon-512.png",
+        "description": "专注可信医疗AI、去敏医疗数据、虚拟细胞与人工线粒体仿真、数字器官与医疗AI智能体的前沿研究机构。",
+        "foundingDate": "2023"
+    }
+    </script>
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Tailwind CSS (固定版本，避免 CDN 自动升级导致样式错乱) -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <!-- Google Fonts：异步加载，字体慢或被墙时不阻塞首屏 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400&display=swap"></noscript>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        scifi: ['Orbitron', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', '"Noto Sans SC"', 'sans-serif'],
+                        scifi: ['Orbitron', '"PingFang SC"', '"Microsoft YaHei"', '"Noto Sans SC"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
                         'neon-blue': '#00f3ff',
                         'neon-purple': '#bc13fe',
+                        'neon-violet': '#c84bff', // 小字号紫色 (对比度达标)
                         'bio-green': '#00ff9d',
                         'deep-bg': '#050b14',
                         'glass': 'rgba(13, 25, 48, 0.7)',
@@ -59,52 +100,74 @@
     </script>
 
     <style>
+        html { scroll-padding-top: 5rem; } /* 锚点跳转时避开 80px 固定导航 */
         body {
             background-color: #050b14;
             color: #e2e8f0;
             overflow-x: hidden;
         }
-        
+
+        /* 首屏高度：svh 适配手机浏览器地址栏 */
+        .hero-screen { min-height: 100vh; min-height: 100svh; }
+
+        /* 背景：WebGL 网络加载前 / 关闭动效时的静态兜底 */
+        #vanta-bg {
+            background:
+                radial-gradient(ellipse 60% 50% at 75% 30%, rgba(0, 243, 255, 0.07), transparent 70%),
+                radial-gradient(ellipse 50% 45% at 15% 85%, rgba(188, 19, 254, 0.06), transparent 70%),
+                #050b14;
+        }
+        #vanta-bg canvas { animation: fade-in 1.2s ease both; }
+        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
         /* 滚动条优化 */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #050b14; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #00f3ff; }
 
-        /* 全息卡片 - 增强版 */
+        /* 全息卡片：--accent 决定悬停时的边框/光晕颜色 */
         .holo-card {
+            --accent: 0, 243, 255;
             background: rgba(10, 20, 40, 0.6);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(0, 243, 255, 0.1);
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
-        
         .holo-card::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            inset: 0;
             border-radius: inherit;
             box-shadow: inset 0 0 20px rgba(0, 243, 255, 0.05);
             pointer-events: none;
         }
-
-        .holo-card:hover {
+        /* 仅可交互的卡片悬停上浮；数据面板等静态卡片 (holo-static) 不动 */
+        .holo-card:not(.holo-static):hover {
             transform: translateY(-5px);
-            border-color: rgba(0, 243, 255, 0.4);
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.15);
+            border-color: rgba(var(--accent), 0.45);
+            box-shadow: 0 0 30px rgba(var(--accent), 0.15);
         }
 
-        /* 扫描线 - 优化层级，不遮挡导航 */
+        /* 渐变描边 (数据面板) */
+        .border-gradient {
+            border: 1px solid transparent !important;
+            background:
+                linear-gradient(rgba(6, 13, 26, 0.92), rgba(6, 13, 26, 0.92)) padding-box,
+                linear-gradient(120deg, rgba(0, 243, 255, 0.55), rgba(188, 19, 254, 0.35) 50%, rgba(0, 255, 157, 0.45)) border-box;
+        }
+
+        /* 扫描线 - 层级低于导航 */
         .scan-line {
             position: fixed;
             left: 0; width: 100%; height: 2px;
             background: rgba(0, 243, 255, 0.3);
             box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
             animation: scan 8s linear infinite;
-            z-index: 30; /* 低于 Nav (z-50) */
+            z-index: 30;
             opacity: 0.3;
             pointer-events: none;
         }
@@ -117,62 +180,109 @@
         .text-gradient-purple {
             background: linear-gradient(to right, #00f3ff, #bc13fe);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* 首屏 DNA 光晕 */
+        .hero-helix { width: 100%; height: auto; filter: drop-shadow(0 0 14px rgba(0, 243, 255, 0.35)); }
+
+        /* 导航：滚动后加深 + 当前板块高亮 */
+        #site-nav.is-scrolled {
+            background: rgba(5, 11, 20, 0.94);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+            border-color: rgba(0, 243, 255, 0.25);
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -6px;
+            height: 2px;
+            border-radius: 2px;
+            background: #00f3ff;
+            box-shadow: 0 0 8px #00f3ff;
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+        .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+        .nav-link.is-active { color: #00f3ff; }
+
+        /* 键盘焦点 */
+        a:focus-visible, button:focus-visible { outline: 2px solid #00f3ff; outline-offset: 3px; }
+
+        /* 滚动渐显 (仅在 JS 可用且未开启"减少动态效果"时) */
+        @media (prefers-reduced-motion: no-preference) {
+            .js .reveal {
+                opacity: 0;
+                translate: 0 24px;
+                transition: opacity 0.7s ease var(--rd, 0ms), translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--rd, 0ms),
+                            transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            }
+            .js .reveal.is-visible { opacity: 1; translate: 0 0; }
+        }
+
+        /* 尊重系统"减少动态效果"设置 */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .scan-line { display: none; }
         }
     </style>
 </head>
 <body class="antialiased font-sans selection:bg-neon-blue selection:text-black">
 
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded focus:bg-neon-blue focus:text-deep-bg focus:font-bold">跳到主要内容</a>
+
     <!-- 背景层 -->
-    <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full -z-10"></div>
-    <div class="scan-line"></div>
+    <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full -z-10" aria-hidden="true"></div>
+    <div id="bg-scrim" class="fixed inset-0 -z-10 pointer-events-none bg-deep-bg opacity-0" aria-hidden="true"></div>
+    <div class="scan-line" aria-hidden="true"></div>
 
     <!-- 导航栏 -->
-    <nav class="fixed w-full z-50 top-0 left-0 border-b border-glass-border bg-deep-bg/80 backdrop-blur-md transition-all duration-300">
+    <nav id="site-nav" aria-label="主导航" class="fixed w-full z-50 top-0 left-0 border-b border-glass-border bg-deep-bg/70 backdrop-blur-md transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo: 语义化修正，使用 a 标签 -->
-                <a href="#home" class="flex items-center group cursor-pointer select-none">
-                    <div class="relative w-10 h-10 mr-3 flex items-center justify-center">
-                        <i class="fa-solid fa-dna text-2xl text-neon-blue absolute animate-pulse-slow" aria-hidden="true"></i>
-                        <div class="absolute w-full h-full border border-neon-blue rounded-full opacity-30 group-hover:scale-110 transition-transform"></div>
-                    </div>
-                    <div class="flex flex-col">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center group select-none">
+                    <img src="logo-mark.svg" width="40" height="40" alt="" class="w-10 h-10 mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_6px_rgba(0,243,255,0.45)]">
+                    <span class="flex flex-col">
                         <span class="font-scifi font-bold text-lg tracking-wider text-white leading-none">IMPF<span class="text-neon-blue">-AI</span></span>
                         <span class="text-[10px] text-gray-400 font-mono tracking-widest">INSTITUTE</span>
-                    </div>
+                    </span>
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="font-scifi text-xs hover:text-neon-blue transition-colors">首页</a>
-                        <a href="#research" class="font-scifi text-xs hover:text-neon-blue transition-colors">核心研究</a>
-                        <a href="#timeline" class="font-scifi text-xs hover:text-neon-blue transition-colors">发展历程</a>
-                        <a href="#awards" class="font-scifi text-xs hover:text-neon-blue transition-colors">荣誉成果</a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-black transition-all font-scifi text-xs">
-                            <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GITHUB
-                        </a>
-                    </div>
+                <div class="hidden md:flex items-center gap-6 lg:gap-8">
+                    <a href="#home" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">首页</a>
+                    <a href="#research" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">核心研究</a>
+                    <a href="#timeline" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">发展历程</a>
+                    <a href="#awards" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">荣誉成果</a>
+                    <a href="#contact" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">加入我们</a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-black transition-all font-scifi text-xs">
+                        <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GITHUB
+                    </a>
                 </div>
 
-                <!-- Mobile Menu Button: 增加 ARIA 属性 -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="text-neon-blue text-2xl hover:text-white transition-colors p-2" aria-label="切换导航菜单" aria-expanded="false" aria-controls="mobile-menu">
-                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-                    </button>
-                </div>
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 text-neon-blue text-2xl hover:text-white transition-colors" aria-label="切换导航菜单" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-deep-bg/95 border-b border-glass-border backdrop-blur-xl absolute w-full left-0 top-20">
+        <div id="mobile-menu" class="hidden md:hidden bg-deep-bg border-b border-glass-border absolute w-full left-0 top-20 shadow-2xl">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                <a href="#home" class="block px-3 py-3 font-scifi text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">首页</a>
-                <a href="#research" class="block px-3 py-3 font-scifi text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">核心研究</a>
-                <a href="#timeline" class="block px-3 py-3 font-scifi text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">发展历程</a>
-                <a href="#awards" class="block px-3 py-3 font-scifi text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">荣誉</a>
-                <!-- Mobile Github Link -->
+                <a href="#home" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">首页</a>
+                <a href="#research" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">核心研究</a>
+                <a href="#timeline" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">发展历程</a>
+                <a href="#awards" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">荣誉成果</a>
+                <a href="#contact" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">加入我们</a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="block px-3 py-3 font-scifi text-sm text-neon-blue hover:text-white hover:bg-neon-blue/10 rounded">
                     <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GITHUB
                 </a>
@@ -180,365 +290,492 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main" tabindex="-1" class="outline-none">
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- pb-28 (112px) 大于数据面板上移的 80px，保证按钮与面板永不重叠 -->
+        <section id="home" class="hero-screen relative flex items-center justify-center pt-28 pb-28 lg:pt-24 overflow-hidden">
+            <!-- 文字区压暗背景网络，提升可读性 -->
+            <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-deep-bg/60 via-deep-bg/30 to-deep-bg/70 lg:bg-gradient-to-r lg:from-deep-bg/75 lg:via-deep-bg/25 lg:to-transparent" aria-hidden="true"></div>
             <!-- 装饰性背景 -->
-            <div class="absolute top-1/4 left-10 w-64 h-64 bg-neon-blue/5 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
-            <div class="absolute bottom-1/4 right-10 w-64 h-64 bg-neon-purple/5 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+            <div class="absolute top-1/4 left-10 w-64 h-64 bg-neon-blue/5 rounded-full blur-3xl animate-pulse-slow pointer-events-none" aria-hidden="true"></div>
+            <div class="absolute bottom-1/4 right-10 w-64 h-64 bg-neon-purple/5 rounded-full blur-3xl animate-pulse-slow pointer-events-none" aria-hidden="true"></div>
 
-            <div class="relative z-10 max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
+            <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+
                 <!-- 文字区 -->
                 <div class="text-left">
                     <div class="inline-flex items-center px-3 py-1 mb-6 text-xs font-mono tracking-widest border border-bio-green/30 text-bio-green rounded-full bg-bio-green/5">
-                        <span class="w-2 h-2 bg-bio-green rounded-full mr-2 animate-pulse"></span>
+                        <span class="w-2 h-2 bg-bio-green rounded-full mr-2 animate-pulse" aria-hidden="true"></span>
                         BIO-DIGITAL CONVERGENCE
                     </div>
-                    <h1 class="font-scifi text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight text-white">
+                    <h1 class="font-scifi text-[clamp(2.25rem,11.5vw,3rem)] sm:text-5xl md:text-6xl xl:text-7xl font-black mb-6 leading-tight text-white">
                         医哲未来<br>
                         <span class="text-gradient-purple">人工智能研究院</span>
                     </h1>
-                    <p class="text-gray-300 text-lg mb-8 font-light leading-relaxed max-w-xl">
-                        在硅基芯片中重构碳基生命。我们致力于构建<span class="text-neon-blue font-semibold">可信医疗AI</span>，通过<span class="text-neon-purple font-semibold">虚拟线粒体</span>与<span class="text-bio-green font-semibold">数字器官</span>仿真，探索生命智慧的算法本质。
+                    <p class="text-gray-300 text-lg mb-8 font-light leading-relaxed max-w-xl text-pretty">
+                        在硅基芯片中重构碳基生命。我们致力于构建<span class="text-neon-blue font-semibold whitespace-nowrap">可信医疗AI</span>，通过<span class="text-neon-violet font-semibold whitespace-nowrap">虚拟线粒体</span>与<span class="text-bio-green font-semibold whitespace-nowrap">数字器官</span>仿真，探索生命智慧的算法本质。
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#research" class="px-8 py-3 bg-neon-blue text-deep-bg font-scifi font-bold rounded hover:shadow-neon transition-all transform hover:-translate-y-1">
+                        <a href="#research" class="group flex-1 sm:flex-none inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-neon-blue text-deep-bg font-bold rounded-lg shadow-[0_0_24px_rgba(0,243,255,0.35)] hover:shadow-[0_0_36px_rgba(0,243,255,0.6)] hover:-translate-y-0.5 transition-all">
                             探索研究领域
+                            <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
                         </a>
-                        <button onclick="document.getElementById('contact').scrollIntoView()" class="px-8 py-3 border border-gray-600 text-white font-scifi rounded hover:border-white hover:bg-white/5 transition-all">
+                        <a href="#contact" class="flex-1 sm:flex-none inline-flex items-center justify-center whitespace-nowrap px-7 py-3.5 border border-white/15 bg-white/5 backdrop-blur text-white rounded-lg hover:border-neon-purple/70 hover:bg-neon-purple/10 transition-all">
                             加入我们
-                        </button>
+                        </a>
                     </div>
                 </div>
 
-                <!-- 视觉区：DNA全息图 -->
-                <div class="relative flex justify-center items-center h-[400px] select-none">
-                    <div class="absolute w-[300px] h-[300px] border border-neon-blue/20 rounded-full animate-spin-slow"></div>
-                    <div class="absolute w-[260px] h-[260px] border border-dashed border-neon-purple/20 rounded-full animate-[spin_10s_linear_infinite_reverse]"></div>
-                    
-                    <!-- 中心浮动DNA -->
-                    <div class="relative z-10 animate-float">
-                        <i class="fa-solid fa-dna text-[150px] text-transparent bg-clip-text bg-gradient-to-b from-neon-blue to-neon-purple opacity-80 drop-shadow-[0_0_15px_rgba(0,243,255,0.5)]" aria-hidden="true"></i>
+                <!-- 视觉区：DNA 全息图 -->
+                <div class="relative flex justify-center items-center h-[320px] sm:h-[400px] select-none" aria-hidden="true">
+                    <div class="absolute w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] border border-neon-blue/20 rounded-full animate-spin-slow"></div>
+                    <div class="absolute w-[215px] h-[215px] sm:w-[260px] sm:h-[260px] border border-dashed border-neon-purple/20 rounded-full animate-[spin_10s_linear_infinite_reverse]"></div>
+                    <div class="absolute w-40 h-40 rounded-full bg-neon-blue/10 blur-3xl"></div>
+
+                    <!-- 中心浮动 DNA -->
+                    <div class="relative z-10 w-[112px] sm:w-[150px] animate-float">
+                        <svg class="hero-helix" viewBox="0 0 160 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <defs>
+                        <linearGradient id="impf-hx-a" x1="0" y1="16" x2="0" y2="244" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00f3ff"/><stop offset="1" stop-color="#bc13fe"/></linearGradient>
+                        <linearGradient id="impf-hx-b" x1="0" y1="16" x2="0" y2="244" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00ff9d"/><stop offset="1" stop-color="#00f3ff"/></linearGradient>
+                        <linearGradient id="impf-hx-r" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00f3ff"/><stop offset="1" stop-color="#bc13fe"/></linearGradient>
+                        </defs>
+                        <g fill="none" stroke-linecap="round" opacity=".4">
+                        <path d="M126.0 44.5 L125.4 47.5 L123.5 50.5 L120.5 53.5 L116.3 56.5 L111.2 59.5 L105.2 62.5 L98.5 65.5 L91.3 68.5 L83.8 71.5 L76.2 74.5 L68.7 77.5 L61.5 80.5 L54.8 83.5 L48.8 86.5 L43.7 89.5 L39.5 92.5 L36.5 95.5 L34.6 98.5 L34.0 101.5" stroke="url(#impf-hx-a)" stroke-width="4"/>
+                        <path d="M126.0 158.5 L125.4 161.5 L123.5 164.5 L120.5 167.5 L116.3 170.5 L111.2 173.5 L105.2 176.5 L98.5 179.5 L91.3 182.5 L83.8 185.5 L76.2 188.5 L68.7 191.5 L61.5 194.5 L54.8 197.5 L48.8 200.5 L43.7 203.5 L39.5 206.5 L36.5 209.5 L34.6 212.5 L34.0 215.5" stroke="url(#impf-hx-a)" stroke-width="4"/>
+                        <path d="M80.0 16.0 L72.4 19.0 L65.1 22.0 L58.1 25.0 L51.7 28.0 L46.2 31.0 L41.5 34.0 L37.9 37.0 L35.4 40.0 L34.2 43.0 L34.0 44.5" stroke="url(#impf-hx-b)" stroke-width="4"/>
+                        <path d="M126.0 101.5 L125.4 104.5 L123.5 107.5 L120.5 110.5 L116.3 113.5 L111.2 116.5 L105.2 119.5 L98.5 122.5 L91.3 125.5 L83.8 128.5 L76.2 131.5 L68.7 134.5 L61.5 137.5 L54.8 140.5 L48.8 143.5 L43.7 146.5 L39.5 149.5 L36.5 152.5 L34.6 155.5 L34.0 158.5" stroke="url(#impf-hx-b)" stroke-width="4"/>
+                        <path d="M126.0 215.5 L125.4 218.5 L123.5 221.5 L120.5 224.5 L116.3 227.5 L111.2 230.5 L105.2 233.5 L98.5 236.5 L91.3 239.5 L83.8 242.5 L80.0 244.0" stroke="url(#impf-hx-b)" stroke-width="4"/>
+                        </g>
+                        <line x1="112.5" y1="30.2" x2="47.5" y2="30.2" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="126.0" y1="44.5" x2="34.0" y2="44.5" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+                        <line x1="112.5" y1="58.8" x2="47.5" y2="58.8" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="47.5" y1="87.2" x2="112.5" y2="87.2" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="34.0" y1="101.5" x2="126.0" y2="101.5" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+                        <line x1="47.5" y1="115.8" x2="112.5" y2="115.8" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="112.5" y1="144.2" x2="47.5" y2="144.2" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="126.0" y1="158.5" x2="34.0" y2="158.5" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+                        <line x1="112.5" y1="172.8" x2="47.5" y2="172.8" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="47.5" y1="201.2" x2="112.5" y2="201.2" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <line x1="34.0" y1="215.5" x2="126.0" y2="215.5" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.25"/>
+                        <line x1="47.5" y1="229.8" x2="112.5" y2="229.8" stroke="url(#impf-hx-r)" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+                        <circle cx="47.5" cy="30.2" r="2.6" fill="#00ff9d" opacity="0.45"/>
+                        <circle cx="34.0" cy="44.5" r="2.6" fill="#00ff9d" opacity="0.45"/>
+                        <circle cx="112.5" cy="58.8" r="2.6" fill="#00f3ff" opacity="0.45"/>
+                        <circle cx="47.5" cy="87.2" r="2.6" fill="#00f3ff" opacity="0.45"/>
+                        <circle cx="34.0" cy="101.5" r="2.6" fill="#00f3ff" opacity="0.45"/>
+                        <circle cx="112.5" cy="115.8" r="2.6" fill="#00ff9d" opacity="0.45"/>
+                        <circle cx="47.5" cy="144.2" r="2.6" fill="#00ff9d" opacity="0.45"/>
+                        <circle cx="34.0" cy="158.5" r="2.6" fill="#00ff9d" opacity="0.45"/>
+                        <circle cx="112.5" cy="172.8" r="2.6" fill="#00f3ff" opacity="0.45"/>
+                        <circle cx="47.5" cy="201.2" r="2.6" fill="#00f3ff" opacity="0.45"/>
+                        <circle cx="34.0" cy="215.5" r="2.6" fill="#00f3ff" opacity="0.45"/>
+                        <circle cx="112.5" cy="229.8" r="2.6" fill="#00ff9d" opacity="0.45"/>
+                        <g fill="none" stroke-linecap="round">
+                        <path d="M80.0 16.0 L87.6 19.0 L94.9 22.0 L101.9 25.0 L108.3 28.0 L113.8 31.0 L118.5 34.0 L122.1 37.0 L124.6 40.0 L125.8 43.0 L126.0 44.5" stroke="url(#impf-hx-a)" stroke-width="6"/>
+                        <path d="M34.0 101.5 L34.6 104.5 L36.5 107.5 L39.5 110.5 L43.7 113.5 L48.8 116.5 L54.8 119.5 L61.5 122.5 L68.7 125.5 L76.2 128.5 L83.8 131.5 L91.3 134.5 L98.5 137.5 L105.2 140.5 L111.2 143.5 L116.3 146.5 L120.5 149.5 L123.5 152.5 L125.4 155.5 L126.0 158.5" stroke="url(#impf-hx-a)" stroke-width="6"/>
+                        <path d="M34.0 215.5 L34.6 218.5 L36.5 221.5 L39.5 224.5 L43.7 227.5 L48.8 230.5 L54.8 233.5 L61.5 236.5 L68.7 239.5 L76.2 242.5 L80.0 244.0" stroke="url(#impf-hx-a)" stroke-width="6"/>
+                        <path d="M34.0 44.5 L34.6 47.5 L36.5 50.5 L39.5 53.5 L43.7 56.5 L48.8 59.5 L54.8 62.5 L61.5 65.5 L68.7 68.5 L76.2 71.5 L83.8 74.5 L91.3 77.5 L98.5 80.5 L105.2 83.5 L111.2 86.5 L116.3 89.5 L120.5 92.5 L123.5 95.5 L125.4 98.5 L126.0 101.5" stroke="url(#impf-hx-b)" stroke-width="6"/>
+                        <path d="M34.0 158.5 L34.6 161.5 L36.5 164.5 L39.5 167.5 L43.7 170.5 L48.8 173.5 L54.8 176.5 L61.5 179.5 L68.7 182.5 L76.2 185.5 L83.8 188.5 L91.3 191.5 L98.5 194.5 L105.2 197.5 L111.2 200.5 L116.3 203.5 L120.5 206.5 L123.5 209.5 L125.4 212.5 L126.0 215.5" stroke="url(#impf-hx-b)" stroke-width="6"/>
+                        </g>
+                        <circle cx="112.5" cy="30.2" r="3.6" fill="#00f3ff" opacity="1"/>
+                        <circle cx="126.0" cy="44.5" r="3.6" fill="#00f3ff" opacity="1"/>
+                        <circle cx="47.5" cy="58.8" r="3.6" fill="#00ff9d" opacity="1"/>
+                        <circle cx="112.5" cy="87.2" r="3.6" fill="#00ff9d" opacity="1"/>
+                        <circle cx="126.0" cy="101.5" r="3.6" fill="#00ff9d" opacity="1"/>
+                        <circle cx="47.5" cy="115.8" r="3.6" fill="#00f3ff" opacity="1"/>
+                        <circle cx="112.5" cy="144.2" r="3.6" fill="#00f3ff" opacity="1"/>
+                        <circle cx="126.0" cy="158.5" r="3.6" fill="#00f3ff" opacity="1"/>
+                        <circle cx="47.5" cy="172.8" r="3.6" fill="#00ff9d" opacity="1"/>
+                        <circle cx="112.5" cy="201.2" r="3.6" fill="#00ff9d" opacity="1"/>
+                        <circle cx="126.0" cy="215.5" r="3.6" fill="#00ff9d" opacity="1"/>
+                        <circle cx="47.5" cy="229.8" r="3.6" fill="#00f3ff" opacity="1"/>
+                        </svg>
                     </div>
-                    
+
                     <!-- 浮动数据点 -->
-                    <div class="absolute top-10 right-10 holo-card p-3 rounded-lg text-xs font-mono text-neon-blue animate-pulse-slow">
-                        <i class="fa-solid fa-heart-pulse mr-2" aria-hidden="true"></i>VITAL: NORMAL
+                    <div class="absolute z-20 top-2 right-0 sm:top-10 sm:right-10 holo-card holo-static p-3 rounded-lg text-xs font-mono text-neon-blue animate-pulse-slow">
+                        <i class="fa-solid fa-heart-pulse mr-2"></i>VITAL: NORMAL
                     </div>
-                    <div class="absolute bottom-10 left-10 holo-card p-3 rounded-lg text-xs font-mono text-neon-purple">
-                        <i class="fa-solid fa-microchip mr-2" aria-hidden="true"></i>AI AGENT: ACTIVE
+                    <div class="absolute z-20 bottom-2 left-0 sm:bottom-10 sm:left-10 holo-card holo-static p-3 rounded-lg text-xs font-mono text-neon-violet">
+                        <i class="fa-solid fa-microchip mr-2"></i>AI AGENT: ACTIVE
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 研究院仪表盘 (Dashboard) -->
-        <section class="relative z-20 -mt-20 mb-20 px-4">
-            <!-- 修复 divide-x 在移动端的表现 -->
-            <div class="max-w-6xl mx-auto holo-card rounded-xl border border-glass-border p-6 md:p-8 shadow-2xl bg-deep-bg/90">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:divide-x md:divide-gray-800">
-                    <div class="text-center px-2">
-                        <div class="text-3xl md:text-4xl font-scifi text-neon-blue font-bold mb-1">No.1</div>
-                        <div class="text-xs text-gray-500 font-mono uppercase">National Award</div>
-                        <div class="text-[10px] text-gray-600 mt-1">NHC Digital Health</div>
+        <!-- 研究院仪表盘 (Dashboard)：-mt-20 让面板压在首屏底部，空间由首屏 pb-28 预留 -->
+        <section class="relative z-20 -mt-20 px-4 sm:px-6 lg:px-8" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="sr-only">研究院关键数据</h2>
+            <div class="max-w-6xl mx-auto holo-card holo-static border-gradient rounded-2xl px-4 py-6 md:p-8 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)]">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 lg:gap-8 lg:divide-x lg:divide-white/10">
+                    <div class="text-center px-1 lg:px-2">
+                        <div class="text-3xl md:text-4xl font-scifi text-neon-blue font-bold mb-2 drop-shadow-[0_0_14px_rgba(0,243,255,0.45)]">No.1</div>
+                        <div class="text-[11px] sm:text-xs text-gray-300 font-mono uppercase tracking-wider">National Award</div>
+                        <div class="text-xs text-gray-400 mt-1">NHC Digital Health</div>
                     </div>
-                    <div class="text-center px-2">
-                        <div class="text-3xl md:text-4xl font-scifi text-neon-purple font-bold mb-1">10PB+</div>
-                        <div class="text-xs text-gray-500 font-mono uppercase">De-identified Data</div>
-                        <div class="text-[10px] text-gray-600 mt-1">Secure Computation</div>
+                    <div class="text-center px-1 lg:px-2">
+                        <div class="text-3xl md:text-4xl font-scifi text-neon-purple font-bold mb-2 drop-shadow-[0_0_14px_rgba(188,19,254,0.45)]">10PB+</div>
+                        <div class="text-[11px] sm:text-xs text-gray-300 font-mono uppercase tracking-wider">De-identified Data</div>
+                        <div class="text-xs text-gray-400 mt-1">Secure Computation</div>
                     </div>
-                    <div class="text-center px-2">
-                        <div class="text-3xl md:text-4xl font-scifi text-bio-green font-bold mb-1">3</div>
-                        <div class="text-xs text-gray-500 font-mono uppercase">Open Models</div>
-                        <div class="text-[10px] text-gray-600 mt-1">HuggingFace / GitHub</div>
+                    <div class="text-center px-1 lg:px-2">
+                        <div class="text-3xl md:text-4xl font-scifi text-bio-green font-bold mb-2 drop-shadow-[0_0_14px_rgba(0,255,157,0.4)]">3</div>
+                        <div class="text-[11px] sm:text-xs text-gray-300 font-mono uppercase tracking-wider">Open Models</div>
+                        <div class="text-xs text-gray-400 mt-1">HuggingFace / GitHub</div>
                     </div>
-                    <div class="text-center px-2">
-                        <div class="text-3xl md:text-4xl font-scifi text-white font-bold mb-1">10M+</div>
-                        <div class="text-xs text-gray-500 font-mono uppercase">Virtual Cells</div>
-                        <div class="text-[10px] text-gray-600 mt-1">Simulated Daily</div>
+                    <div class="text-center px-1 lg:px-2">
+                        <div class="text-3xl md:text-4xl font-scifi text-white font-bold mb-2 drop-shadow-[0_0_14px_rgba(255,255,255,0.35)]">10M+</div>
+                        <div class="text-[11px] sm:text-xs text-gray-300 font-mono uppercase tracking-wider">Virtual Cells</div>
+                        <div class="text-xs text-gray-400 mt-1">Simulated Daily</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 核心研究领域 -->
-        <section id="research" class="py-24 relative">
+        <section id="research" class="py-16 md:py-24 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+                <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-3xl md:text-4xl font-bold mb-4 text-white">
                         <span class="text-neon-blue">///</span> 核心研究矩阵
                     </h2>
-                    <p class="text-gray-400 font-mono text-sm">CORE RESEARCH MATRIX & INFRASTRUCTURE</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">CORE RESEARCH MATRIX &amp; INFRASTRUCTURE</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
                     <!-- 1. 去敏数据 -->
-                    <article class="holo-card p-8 rounded-xl group hover:bg-blue-900/10">
+                    <article class="holo-card reveal p-6 md:p-8 rounded-2xl group hover:bg-blue-900/10">
                         <div class="flex justify-between items-start mb-6">
                             <div class="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center border border-neon-blue/30 group-hover:border-neon-blue transition-colors">
                                 <i class="fa-solid fa-shield-virus text-neon-blue text-2xl" aria-hidden="true"></i>
                             </div>
-                            <span class="font-mono text-xs text-gray-500">01_DATA</span>
+                            <span class="font-mono text-xs text-gray-400 tracking-wider">01_DATA</span>
                         </div>
-                        <h3 class="font-scifi text-xl font-bold mb-3 text-white group-hover:text-neon-blue transition-colors">去敏医疗数据搜集</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-neon-blue transition-colors">去敏医疗数据搜集</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4">
                             建立基于联邦学习的隐私计算平台。实现多中心医疗数据的标准化清洗与结构化存储，确保数据可用不可见。
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] border border-gray-700 px-2 py-1 rounded text-gray-400">Federated Learning</span>
-                            <span class="text-[10px] border border-gray-700 px-2 py-1 rounded text-gray-400">Privacy</span>
+                            <span class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">Federated Learning</span>
+                            <span class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">Privacy</span>
                         </div>
                     </article>
 
                     <!-- 2. 虚拟细胞与线粒体 -->
-                    <article class="holo-card p-8 rounded-xl group hover:bg-purple-900/10">
+                    <article class="holo-card reveal p-6 md:p-8 rounded-2xl group hover:bg-purple-900/10" style="--accent: 188, 19, 254">
                         <div class="flex justify-between items-start mb-6">
                             <div class="w-14 h-14 bg-purple-900/30 rounded-lg flex items-center justify-center border border-neon-purple/30 group-hover:border-neon-purple transition-colors">
                                 <i class="fa-solid fa-bacterium text-neon-purple text-2xl animate-pulse" aria-hidden="true"></i>
                             </div>
-                            <span class="font-mono text-xs text-gray-500">02_BIO_SIM</span>
+                            <span class="font-mono text-xs text-gray-400 tracking-wider">02_BIO_SIM</span>
                         </div>
-                        <h3 class="font-scifi text-xl font-bold mb-3 text-white group-hover:text-neon-purple transition-colors">虚拟细胞 & 人工线粒体</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-neon-violet transition-colors">虚拟细胞 &amp; 人工线粒体</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                            <span class="text-neon-purple">人工线粒体</span>能量代谢建模与<span class="text-neon-purple">虚拟细胞</span>信号通路仿真。构建高保真数字孪生类器官，用于药物筛选与病理推演。
+                            <span class="text-neon-violet">人工线粒体</span>能量代谢建模与<span class="text-neon-violet">虚拟细胞</span>信号通路仿真。构建高保真数字孪生类器官，用于药物筛选与病理推演。
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] border border-neon-purple/30 px-2 py-1 rounded text-neon-purple">Virtual Mitochondria</span>
-                            <span class="text-[10px] border border-neon-purple/30 px-2 py-1 rounded text-neon-purple">Digital Organoid</span>
+                            <span class="text-[11px] font-mono border border-neon-purple/40 bg-neon-purple/5 px-2.5 py-1 rounded-md text-neon-violet">Virtual Mitochondria</span>
+                            <span class="text-[11px] font-mono border border-neon-purple/40 bg-neon-purple/5 px-2.5 py-1 rounded-md text-neon-violet">Digital Organoid</span>
                         </div>
                     </article>
 
                     <!-- 3. 开源模型 -->
-                    <article class="holo-card p-8 rounded-xl group hover:bg-green-900/10">
+                    <article class="holo-card reveal p-6 md:p-8 rounded-2xl group hover:bg-green-900/10" style="--accent: 0, 255, 157">
                         <div class="flex justify-between items-start mb-6">
                             <div class="w-14 h-14 bg-green-900/30 rounded-lg flex items-center justify-center border border-bio-green/30 group-hover:border-bio-green transition-colors">
                                 <i class="fa-solid fa-code-branch text-bio-green text-2xl" aria-hidden="true"></i>
                             </div>
-                            <span class="font-mono text-xs text-gray-500">03_OPEN_SOURCE</span>
+                            <span class="font-mono text-xs text-gray-400 tracking-wider">03_OPEN_SOURCE</span>
                         </div>
-                        <h3 class="font-scifi text-xl font-bold mb-3 text-white group-hover:text-bio-green transition-colors">开源模型 & 仿真评估</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-bio-green transition-colors">开源模型 &amp; 仿真评估</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4">
                             发布医疗垂类基座模型，并维护 OpenMedicalGym 仿真环境，为全球开发者提供算法鲁棒性测试的“数字靶场”。
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] border border-gray-700 px-2 py-1 rounded text-gray-400">Benchmarks</span>
-                            <span class="text-[10px] border border-gray-700 px-2 py-1 rounded text-gray-400">HuggingFace</span>
+                            <span class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">Benchmarks</span>
+                            <span class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">HuggingFace</span>
                         </div>
                     </article>
 
                     <!-- 4. 超级智能体 -->
-                    <article class="holo-card p-8 rounded-xl group hover:bg-red-900/10">
+                    <article class="holo-card reveal p-6 md:p-8 rounded-2xl group hover:bg-red-900/10" style="--accent: 239, 68, 68">
                         <div class="flex justify-between items-start mb-6">
                             <div class="w-14 h-14 bg-red-900/30 rounded-lg flex items-center justify-center border border-red-500/30 group-hover:border-red-500 transition-colors">
                                 <i class="fa-solid fa-brain text-red-500 text-2xl" aria-hidden="true"></i>
                             </div>
-                            <span class="font-mono text-xs text-gray-500">04_AGI</span>
+                            <span class="font-mono text-xs text-gray-400 tracking-wider">04_AGI</span>
                         </div>
-                        <h3 class="font-scifi text-xl font-bold mb-3 text-white group-hover:text-red-500 transition-colors">超级医疗AI智能体</h3>
+                        <h3 class="text-xl font-bold mb-3 text-white group-hover:text-red-400 transition-colors">超级医疗AI智能体</h3>
                         <p class="text-gray-400 text-sm leading-relaxed mb-4">
                             从感知到认知。开发具备自主决策能力的医疗 Agents，在辅助诊断、手术规划及数字器官维护中实现人机协同。
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] border border-gray-700 px-2 py-1 rounded text-gray-400">LLM</span>
-                            <span class="text-[10px] border border-gray-700 px-2 py-1 rounded text-gray-400">Agents</span>
+                            <span class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">LLM</span>
+                            <span class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">Agents</span>
                         </div>
                     </article>
 
                 </div>
 
                 <!-- 研究光谱 -->
-                <div class="mt-12 flex flex-wrap gap-3 justify-center">
-                    <span class="px-4 py-1.5 rounded-full border border-glass-border bg-glass text-xs font-mono text-gray-300">🧬 Computational Biology</span>
-                    <span class="px-4 py-1.5 rounded-full border border-glass-border bg-glass text-xs font-mono text-gray-300">🧠 Neuro-Symbolic AI</span>
-                    <span class="px-4 py-1.5 rounded-full border border-glass-border bg-glass text-xs font-mono text-gray-300">🏥 Smart Hospital Twin</span>
-                    <span class="px-4 py-1.5 rounded-full border border-glass-border bg-glass text-xs font-mono text-gray-300">💊 AI Drug Discovery</span>
+                <div class="mt-12 max-w-xl lg:max-w-none mx-auto flex flex-wrap gap-3 justify-center reveal">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-glass text-xs font-mono text-gray-300"><i class="fa-solid fa-dna text-neon-blue" aria-hidden="true"></i>Computational Biology</span>
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-glass text-xs font-mono text-gray-300"><i class="fa-solid fa-brain text-neon-violet" aria-hidden="true"></i>Neuro-Symbolic AI</span>
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-glass text-xs font-mono text-gray-300"><i class="fa-solid fa-hospital text-bio-green" aria-hidden="true"></i>Smart Hospital Twin</span>
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-glass text-xs font-mono text-gray-300"><i class="fa-solid fa-capsules text-red-400" aria-hidden="true"></i>AI Drug Discovery</span>
                 </div>
             </div>
         </section>
 
         <!-- 发展历程 Timeline -->
-        <section id="timeline" class="py-24 bg-black/20">
-            <div class="max-w-4xl mx-auto px-4">
-                <h2 class="font-scifi text-3xl md:text-4xl font-bold mb-12 text-center">研究院发展时间轴</h2>
-                <div class="relative border-l-2 border-gray-800 pl-8 space-y-12 ml-4 md:ml-0">
-                    
+        <section id="timeline" class="py-16 md:py-24">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-14 reveal">
+                    <h2 class="font-scifi text-3xl md:text-4xl font-bold mb-4 text-white">
+                        <span class="text-neon-purple">///</span> 研究院发展时间轴
+                    </h2>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">INSTITUTE MILESTONES</p>
+                </div>
+                <ol class="relative border-l-2 border-transparent [border-image:linear-gradient(to_bottom,#00f3ff,#bc13fe,#1f2937)_1] pl-8 space-y-6 ml-3 lg:ml-0">
+
                     <!-- 节点 1 -->
-                    <div class="relative group">
-                        <div class="absolute -left-[41px] top-1 w-6 h-6 bg-deep-bg border-2 border-neon-blue rounded-full flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <li class="relative group reveal">
+                        <div class="absolute -left-[45px] top-6 w-6 h-6 bg-deep-bg border-2 border-neon-blue rounded-full flex items-center justify-center group-hover:scale-125 transition-transform" aria-hidden="true">
                             <div class="w-2 h-2 bg-neon-blue rounded-full"></div>
                         </div>
-                        <div class="font-mono text-neon-blue text-xs mb-1">FUTURE / ONGOING</div>
-                        <h3 class="text-xl font-bold text-white">数字器官全真模拟系统</h3>
-                        <p class="text-gray-400 text-sm mt-2">启动千万级参数的数字心脏与肝脏类器官仿真项目，探索无创临床试验新范式。</p>
-                    </div>
+                        <div class="holo-card holo-static rounded-xl p-5 md:p-6">
+                            <div class="font-mono text-neon-blue text-xs mb-1">FUTURE / ONGOING</div>
+                            <h3 class="text-lg md:text-xl font-bold text-white">数字器官全真模拟系统</h3>
+                            <p class="text-gray-400 text-sm mt-2">启动千万级参数的数字心脏与肝脏类器官仿真项目，探索无创临床试验新范式。</p>
+                        </div>
+                    </li>
 
                     <!-- 节点 2 -->
-                    <div class="relative group">
-                        <div class="absolute -left-[41px] top-1 w-6 h-6 bg-deep-bg border-2 border-neon-purple rounded-full flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <li class="relative group reveal">
+                        <div class="absolute -left-[45px] top-6 w-6 h-6 bg-deep-bg border-2 border-neon-purple rounded-full flex items-center justify-center group-hover:scale-125 transition-transform" aria-hidden="true">
                             <div class="w-2 h-2 bg-neon-purple rounded-full"></div>
                         </div>
-                        <div class="font-mono text-neon-purple text-xs mb-1">2024 · Q3</div>
-                        <h3 class="text-xl font-bold text-white">荣誉加冕</h3>
-                        <p class="text-gray-400 text-sm mt-2">斩获国家卫健委数字健康创新应用大赛一等奖、亚马逊云黑客松亚军。行业影响力初步确立。</p>
-                    </div>
+                        <div class="holo-card holo-static rounded-xl p-5 md:p-6">
+                            <div class="font-mono text-neon-violet text-xs mb-1">2024 · Q3</div>
+                            <h3 class="text-lg md:text-xl font-bold text-white">荣誉加冕</h3>
+                            <p class="text-gray-400 text-sm mt-2">斩获国家卫健委数字健康创新应用大赛一等奖、亚马逊云黑客松亚军。行业影响力初步确立。</p>
+                        </div>
+                    </li>
 
                     <!-- 节点 3 -->
-                    <div class="relative group">
-                        <div class="absolute -left-[41px] top-1 w-6 h-6 bg-deep-bg border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:scale-125 transition-transform">
+                    <li class="relative group reveal">
+                        <div class="absolute -left-[45px] top-6 w-6 h-6 bg-deep-bg border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:scale-125 transition-transform" aria-hidden="true">
                             <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
                         </div>
-                        <div class="font-mono text-gray-500 text-xs mb-1">2023 · Q4</div>
-                        <h3 class="text-xl font-bold text-white">研究院成立</h3>
-                        <p class="text-gray-400 text-sm mt-2">确立“医哲未来”愿景，完成首轮去敏数据搜集与基础算力平台搭建。</p>
-                    </div>
+                        <div class="holo-card holo-static rounded-xl p-5 md:p-6">
+                            <div class="font-mono text-gray-400 text-xs mb-1">2023 · Q4</div>
+                            <h3 class="text-lg md:text-xl font-bold text-white">研究院成立</h3>
+                            <p class="text-gray-400 text-sm mt-2">确立“医哲未来”愿景，完成首轮去敏数据搜集与基础算力平台搭建。</p>
+                        </div>
+                    </li>
 
-                </div>
+                </ol>
             </div>
         </section>
 
         <!-- 荣誉展示 -->
-        <section id="awards" class="py-24">
+        <section id="awards" class="py-16 md:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row items-center justify-between mb-12">
-                    <div>
-                        <h2 class="font-scifi text-3xl md:text-4xl font-bold mb-2">荣誉与认可</h2>
-                        <p class="text-gray-500 font-mono text-sm">AWARDS & RECOGNITION</p>
-                    </div>
-                    <div class="hidden md:block w-1/3 h-px bg-gradient-to-r from-neon-blue/50 to-transparent"></div>
+                <div class="text-center mb-14 reveal">
+                    <h2 class="font-scifi text-3xl md:text-4xl font-bold mb-4 text-white">
+                        <span class="text-bio-green">///</span> 荣誉与认可
+                    </h2>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">AWARDS &amp; RECOGNITION</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Award 1 -->
-                    <div class="holo-card p-6 rounded-lg border-l-4 border-l-yellow-500 group">
-                        <i class="fa-solid fa-trophy text-4xl text-yellow-500/20 absolute top-4 right-4 group-hover:text-yellow-500/50 transition-colors" aria-hidden="true"></i>
+                    <div class="holo-card reveal p-6 rounded-xl group" style="--accent: 234, 179, 8">
+                        <div class="absolute inset-y-0 left-0 w-1 bg-yellow-500" aria-hidden="true"></div>
+                        <i class="fa-solid fa-trophy text-3xl lg:text-4xl text-yellow-500/25 absolute top-3 right-3 lg:top-5 lg:right-5 group-hover:text-yellow-500/60 transition-colors" aria-hidden="true"></i>
                         <div class="text-yellow-500 font-scifi font-bold mb-1">1ST PRIZE</div>
                         <h3 class="text-white font-bold text-lg leading-snug mb-2">国家卫健委</h3>
-                        <p class="text-gray-400 text-xs">第二届全国数字健康创新应用大赛</p>
+                        <p class="text-gray-400 text-sm text-pretty">第二届全国数字健康创新应用大赛</p>
                     </div>
                     <!-- Award 2 -->
-                    <div class="holo-card p-6 rounded-lg border-l-4 border-l-blue-400 group">
-                        <i class="fa-solid fa-award text-4xl text-blue-400/20 absolute top-4 right-4 group-hover:text-blue-400/50 transition-colors" aria-hidden="true"></i>
+                    <div class="holo-card reveal p-6 rounded-xl group" style="--accent: 96, 165, 250">
+                        <div class="absolute inset-y-0 left-0 w-1 bg-blue-400" aria-hidden="true"></div>
+                        <i class="fa-solid fa-award text-3xl lg:text-4xl text-blue-400/25 absolute top-3 right-3 lg:top-5 lg:right-5 group-hover:text-blue-400/60 transition-colors" aria-hidden="true"></i>
                         <div class="text-blue-400 font-scifi font-bold mb-1">BEST DEMO</div>
                         <h3 class="text-white font-bold text-lg leading-snug mb-2">英特尔中国学术峰会</h3>
-                        <p class="text-gray-400 text-xs">Intel China Academic Summit</p>
+                        <p class="text-gray-400 text-sm text-pretty">Intel China Academic Summit</p>
                     </div>
                     <!-- Award 3 -->
-                    <div class="holo-card p-6 rounded-lg border-l-4 border-l-orange-500 group">
-                        <i class="fa-brands fa-aws text-4xl text-orange-500/20 absolute top-4 right-4 group-hover:text-orange-500/50 transition-colors" aria-hidden="true"></i>
+                    <div class="holo-card reveal p-6 rounded-xl group" style="--accent: 249, 115, 22">
+                        <div class="absolute inset-y-0 left-0 w-1 bg-orange-500" aria-hidden="true"></div>
+                        <i class="fa-brands fa-aws text-3xl lg:text-4xl text-orange-500/25 absolute top-3 right-3 lg:top-5 lg:right-5 group-hover:text-orange-500/60 transition-colors" aria-hidden="true"></i>
                         <div class="text-orange-500 font-scifi font-bold mb-1">2ND PLACE</div>
                         <h3 class="text-white font-bold text-lg leading-snug mb-2">AWS Hackathon</h3>
-                        <p class="text-gray-400 text-xs">亚马逊云科技医疗大赛</p>
+                        <p class="text-gray-400 text-sm text-pretty">亚马逊云科技医疗大赛</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 合作与招募 (CTA) -->
-        <section id="contact" class="py-16 px-4">
-            <div class="max-w-5xl mx-auto holo-card rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon-blue via-neon-purple to-bio-green"></div>
-                
-                <div class="relative z-10 mb-8 md:mb-0 md:pr-8">
-                    <div class="text-xs font-mono text-neon-blue mb-2">COLLABORATION & CAREERS</div>
-                    <h3 class="font-scifi text-2xl md:text-3xl text-white mb-3">
-                        共建生物数字未来
-                    </h3>
-                    <p class="text-gray-400 text-sm max-w-xl">
+        <section id="contact" class="pt-4 pb-20 md:pb-24 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto holo-card holo-static reveal rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-neon-blue via-neon-purple to-bio-green" aria-hidden="true"></div>
+                <div class="absolute -right-24 -top-24 w-72 h-72 rounded-full bg-neon-purple/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+                <div class="absolute -left-24 -bottom-24 w-72 h-72 rounded-full bg-neon-blue/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+                <div class="relative z-10">
+                    <div class="text-xs font-mono text-neon-blue mb-2 tracking-widest">COLLABORATION &amp; CAREERS</div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">共建生物数字未来</h2>
+                    <p class="text-gray-400 text-sm max-w-xl text-pretty">
                         我们正在寻找对<span class="text-white">计算生物学、医学AI、复杂系统仿真</span>充满热情的合作伙伴与研究员。同时也欢迎医疗机构加入我们的去敏数据网络。
                     </p>
                 </div>
-                <div class="relative z-10 flex flex-col w-full md:w-auto gap-3">
-                    <!-- 修复链接跳转问题 -->
-                    <a href="mailto:contact@impf-ai.org" class="flex items-center justify-center px-6 py-3 bg-white text-black font-scifi text-sm font-bold rounded hover:bg-neon-blue transition-colors">
+                <div class="relative z-10 flex flex-col w-full md:w-auto md:shrink-0 gap-3">
+                    <a href="mailto:contact@impf-ai.org" class="flex items-center justify-center whitespace-nowrap px-6 py-3 bg-white text-black text-sm font-bold rounded-lg hover:bg-neon-blue transition-colors">
                         <i class="fa-solid fa-envelope mr-2" aria-hidden="true"></i> 申请合作
                     </a>
-                    <button type="button" class="flex items-center justify-center px-6 py-3 border border-glass-border text-gray-300 font-scifi text-sm rounded hover:text-white hover:border-white transition-colors">
+                    <a href="mailto:contact@impf-ai.org?subject=%E7%94%B3%E8%AF%B7%E8%81%8C%E4%BD%8D" class="flex items-center justify-center whitespace-nowrap px-6 py-3 border border-white/15 text-gray-300 text-sm rounded-lg hover:text-white hover:border-white transition-colors">
                         查看开放职位
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-800 py-12 bg-black relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0 text-center md:text-left">
-                <span class="font-scifi font-bold text-xl text-white">IMPF<span class="text-neon-blue">-AI</span></span>
-                <p class="text-gray-600 text-xs mt-2 font-mono">INSTITUTE OF MEDICAL PHILOSOPHY & FUTURE AI</p>
+    <footer class="relative z-10 bg-deep-bg/95 backdrop-blur py-12">
+        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-neon-blue/50 to-transparent" aria-hidden="true"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <a href="#home" class="inline-flex items-center group">
+                    <img src="logo-mark.svg" width="36" height="36" alt="" class="w-9 h-9 mr-3 transition-transform duration-300 group-hover:scale-110">
+                    <span class="font-scifi font-bold text-xl text-white">IMPF<span class="text-neon-blue">-AI</span></span>
+                </a>
+                <p class="text-gray-400 text-[10px] sm:text-xs mt-3 font-mono tracking-wider text-balance">INSTITUTE OF MEDICAL PHILOSOPHY &amp; FUTURE AI</p>
             </div>
-            <div class="flex space-x-6 text-gray-500 text-sm mb-4 md:mb-0">
-                <!-- 修复占位链接和无障碍 -->
-                <a href="javascript:void(0)" class="hover:text-neon-blue transition-colors" aria-label="微信公众号"><i class="fa-brands fa-weixin" aria-hidden="true"></i></a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-neon-blue transition-colors" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-                <a href="mailto:contact@impf-ai.org" class="hover:text-neon-blue transition-colors" aria-label="联系邮箱"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+            <div class="flex gap-3 text-gray-400">
+                <a href="javascript:void(0)" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="微信公众号"><i class="fa-brands fa-weixin" aria-hidden="true"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                <a href="mailto:contact@impf-ai.org" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="联系邮箱"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
             </div>
-            <div class="text-gray-600 text-xs font-mono">
-                &copy; 2024 IMPF-AI. All rights reserved.
+            <div class="text-gray-400 text-xs font-mono">
+                &copy; 2023–<span id="year">2026</span> IMPF-AI. All rights reserved.
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // 优化的移动端菜单逻辑
         document.addEventListener('DOMContentLoaded', () => {
+            // 移动端菜单：点击链接 / 点击外部 / Esc 均可收起
             const toggle = document.getElementById('menu-toggle');
             const menu = document.getElementById('mobile-menu');
-            
             if (toggle && menu) {
-                // 切换菜单状态
-                toggle.addEventListener('click', () => {
-                    menu.classList.toggle('hidden');
-                    const isOpen = !menu.classList.contains('hidden');
-                    
-                    // 更新图标
-                    const icon = toggle.querySelector('i');
-                    icon.classList.toggle('fa-bars', !isOpen);
-                    icon.classList.toggle('fa-xmark', isOpen);
-                    
-                    // 更新 ARIA 状态
-                    toggle.setAttribute('aria-expanded', isOpen);
+                const icon = toggle.querySelector('i');
+                const setMenu = open => {
+                    menu.classList.toggle('hidden', !open);
+                    toggle.setAttribute('aria-expanded', String(open));
+                    icon.classList.toggle('fa-bars', !open);
+                    icon.classList.toggle('fa-xmark', open);
+                };
+                const isOpen = () => !menu.classList.contains('hidden');
+                toggle.addEventListener('click', () => setMenu(!isOpen()));
+                menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+                document.addEventListener('click', e => {
+                    if (isOpen() && !menu.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
                 });
-
-                // 点击菜单项后自动收起
-                const menuLinks = menu.querySelectorAll('a');
-                menuLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        menu.classList.add('hidden');
-                        toggle.setAttribute('aria-expanded', 'false');
-                        
-                        const icon = toggle.querySelector('i');
-                        icon.classList.add('fa-bars');
-                        icon.classList.remove('fa-xmark');
-                    });
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape' && isOpen()) { setMenu(false); toggle.focus(); }
                 });
             }
 
-            // Vanta Background Initialization
-            try {
-                VANTA.NET({
-                    el: "#vanta-bg",
-                    mouseControls: true,
-                    touchControls: true,
-                    gyroControls: false,
-                    minHeight: 200.00,
-                    minWidth: 200.00,
-                    scale: 1.00,
-                    scaleMobile: 1.00,
-                    color: 0x00f3ff,       // 霓虹蓝
-                    backgroundColor: 0x050b14, // 深背景
-                    points: 10.00,         // 保持性能
-                    maxDistance: 20.00,
-                    spacing: 18.00,
-                    showDots: true
-                })
-            } catch (e) {
-                console.log("WebGL/Vanta init failed", e);
+            // 导航栏滚动态 + 背景网络随滚动渐暗 (提升正文可读性)
+            const nav = document.getElementById('site-nav');
+            const scrim = document.getElementById('bg-scrim');
+            let ticking = false;
+            const onScroll = () => {
+                ticking = false;
+                nav.classList.toggle('is-scrolled', window.scrollY > 24);
+                scrim.style.opacity = Math.min(0.55, window.scrollY / window.innerHeight * 0.55).toFixed(3);
+            };
+            window.addEventListener('scroll', () => {
+                if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+            }, { passive: true });
+            onScroll();
+
+            if ('IntersectionObserver' in window) {
+                // 当前板块高亮
+                const links = [...document.querySelectorAll('.nav-link')];
+                const spy = new IntersectionObserver(entries => entries.forEach(e => {
+                    if (e.isIntersecting) links.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + e.target.id));
+                }), { rootMargin: '-45% 0px -50% 0px' });
+                ['home', 'research', 'timeline', 'awards', 'contact'].forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el) spy.observe(el);
+                });
+
+                // 滚动渐显 (同组元素依次出现)
+                const io = new IntersectionObserver(entries => entries.forEach(e => {
+                    if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+                }), { rootMargin: '0px 0px -8% 0px' });
+                document.querySelectorAll('.reveal').forEach(el => {
+                    const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+                    el.style.setProperty('--rd', (siblings.indexOf(el) % 4) * 90 + 'ms');
+                    io.observe(el);
+                });
+            } else {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
             }
+
+            const year = document.getElementById('year');
+            if (year) year.textContent = new Date().getFullYear();
         });
+
+        // 动态网络背景：页面加载完成后再加载 three.js + Vanta，不阻塞首屏；
+        // 开启"减少动态效果"或省流量模式时跳过，保留静态渐变背景
+        (function () {
+            const mm = q => window.matchMedia && window.matchMedia(q).matches;
+            if (mm('(prefers-reduced-motion: reduce)') || (navigator.connection && navigator.connection.saveData)) return;
+            const load = (src, integrity) => new Promise((resolve, reject) => {
+                const s = document.createElement('script');
+                s.src = src;
+                s.integrity = integrity;
+                s.crossOrigin = 'anonymous';
+                s.referrerPolicy = 'no-referrer';
+                s.onload = resolve;
+                s.onerror = reject;
+                document.head.appendChild(s);
+            });
+            const start = () => {
+                load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js', 'sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ==')
+                    .then(() => load('https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js', 'sha512-lH/5/byfwH0bqySiiSINJJoEoWFEBGKgOwsnAlZZPviNJI1DDBVXjPHgEkM0fowfOp6NMBAN4ROAYjx+uEkEjQ=='))
+                    .then(() => {
+                        const small = window.innerWidth < 768;
+                        window.vantaEffect = VANTA.NET({
+                            el: '#vanta-bg',
+                            mouseControls: true,
+                            touchControls: true,
+                            gyroControls: false,
+                            minHeight: 200.00,
+                            minWidth: 200.00,
+                            scale: 1.00,
+                            scaleMobile: 1.50,        // 手机端降低渲染分辨率，省电
+                            color: 0x00f3ff,          // 霓虹蓝
+                            backgroundColor: 0x050b14, // 深背景
+                            points: small ? 6.00 : 10.00,
+                            maxDistance: small ? 16.00 : 20.00,
+                            spacing: small ? 20.00 : 18.00,
+                            showDots: true
+                        });
+                    })
+                    .catch(e => console.warn('Vanta background skipped:', e));
+            };
+            if (document.readyState === 'complete') start();
+            else window.addEventListener('load', start);
+        })();
     </script>
 </body>
 

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3.5 3.5 57 57">
+  <title>IMPF-AI</title>
+  <defs>
+    <linearGradient id="impf-nav-g" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00f3ff"/>
+      <stop offset="1" stop-color="#bc13fe"/>
+    </linearGradient>
+    <mask id="impf-nav-ma" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M25 16C25 22.4 39 25.6 39 32" fill="none" stroke="#000" stroke-width="8"/>
+    </mask>
+    <mask id="impf-nav-mb" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M25 32C25 38.4 39 41.6 39 48" fill="none" stroke="#000" stroke-width="8"/>
+    </mask>
+  </defs>
+  <path d="M54.38 22.03A24.5 24.5 0 1 1 41.97 9.62" fill="none" stroke="url(#impf-nav-g)" stroke-width="5.5" stroke-linecap="round"/>
+  <circle cx="52.5" cy="11.5" r="4.5" fill="#00ff9d"/>
+  <path d="M39 16C39 22.4 25 25.6 25 32S39 41.6 39 48" fill="none" stroke="#00ff9d" stroke-width="5" stroke-linecap="round" mask="url(#impf-nav-ma)"/>
+  <path d="M25 16C25 22.4 39 25.6 39 32S25 41.6 25 48" fill="none" stroke="#00f3ff" stroke-width="5" stroke-linecap="round" mask="url(#impf-nav-mb)"/>
+</svg>
