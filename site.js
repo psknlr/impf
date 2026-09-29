@@ -1,3 +1,8 @@
+// 地址栏隐藏 .html：GitHub Pages 同时支持 /research 与 /research.html，这里把旧链接显示为简洁地址
+if (/^https?:$/.test(location.protocol) && /\.html$/.test(location.pathname)) {
+    history.replaceState(null, '', location.pathname.replace(/index\.html$/, '').replace(/\.html$/, '') + location.search + location.hash);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 移动端菜单：点击链接 / 点击外部 / Esc 均可收起
     const toggle = document.getElementById('menu-toggle');
