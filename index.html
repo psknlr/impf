@@ -62,183 +62,9 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <script>
-        if (window.tailwind) tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', '"Noto Sans SC"', 'sans-serif'],
-                        scifi: ['Orbitron', '"PingFang SC"', '"Microsoft YaHei"', '"Noto Sans SC"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    },
-                    colors: {
-                        'neon-blue': '#00f3ff',
-                        'neon-purple': '#bc13fe',
-                        'neon-violet': '#c84bff', // 小字号紫色 (对比度达标)
-                        'bio-green': '#00ff9d',
-                        'deep-bg': '#050b14',
-                        'glass': 'rgba(13, 25, 48, 0.7)',
-                        'glass-border': 'rgba(0, 243, 255, 0.15)',
-                    },
-                    boxShadow: {
-                        'neon': '0 0 10px rgba(0, 243, 255, 0.4), 0 0 20px rgba(0, 243, 255, 0.2)',
-                    },
-                    animation: {
-                        'spin-slow': 'spin 8s linear infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="tw-config.js"></script>
 
-    <style>
-        html { scroll-padding-top: 5rem; } /* 锚点跳转时避开 80px 固定导航 */
-        body {
-            background-color: #050b14;
-            color: #e2e8f0;
-            overflow-x: hidden;
-        }
-
-        /* 首屏高度：svh 适配手机浏览器地址栏 */
-        .hero-screen { min-height: 100vh; min-height: 100svh; }
-
-        /* 背景：WebGL 网络加载前 / 关闭动效时的静态兜底 */
-        #vanta-bg {
-            background:
-                radial-gradient(ellipse 60% 50% at 75% 30%, rgba(0, 243, 255, 0.07), transparent 70%),
-                radial-gradient(ellipse 50% 45% at 15% 85%, rgba(188, 19, 254, 0.06), transparent 70%),
-                #050b14;
-        }
-        #vanta-bg canvas { animation: fade-in 1.2s ease both; }
-        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
-
-        /* 滚动条优化 */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #050b14; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: #00f3ff; }
-
-        /* 全息卡片：--accent 决定悬停时的边框/光晕颜色 */
-        .holo-card {
-            --accent: 0, 243, 255;
-            background: rgba(10, 20, 40, 0.6);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(0, 243, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        }
-        .holo-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            box-shadow: inset 0 0 20px rgba(0, 243, 255, 0.05);
-            pointer-events: none;
-        }
-        /* 仅可交互的卡片悬停上浮；数据面板等静态卡片 (holo-static) 不动 */
-        .holo-card:not(.holo-static):hover {
-            transform: translateY(-5px);
-            border-color: rgba(var(--accent), 0.45);
-            box-shadow: 0 0 30px rgba(var(--accent), 0.15);
-        }
-
-        /* 渐变描边 (数据面板) */
-        .border-gradient {
-            border: 1px solid transparent !important;
-            background:
-                linear-gradient(rgba(6, 13, 26, 0.92), rgba(6, 13, 26, 0.92)) padding-box,
-                linear-gradient(120deg, rgba(0, 243, 255, 0.55), rgba(188, 19, 254, 0.35) 50%, rgba(0, 255, 157, 0.45)) border-box;
-        }
-
-        /* 扫描线 - 层级低于导航 */
-        .scan-line {
-            position: fixed;
-            left: 0; width: 100%; height: 2px;
-            background: rgba(0, 243, 255, 0.3);
-            box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
-            animation: scan 8s linear infinite;
-            z-index: 30;
-            opacity: 0.3;
-            pointer-events: none;
-        }
-        @keyframes scan {
-            0% { top: -10%; }
-            100% { top: 110%; }
-        }
-
-        /* 霓虹文字渐变 */
-        .text-gradient-purple {
-            background: linear-gradient(to right, #00f3ff, #bc13fe);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* 首屏 DNA 光晕 */
-        .hero-helix { width: 100%; max-width: 150px; height: auto; filter: drop-shadow(0 0 14px rgba(0, 243, 255, 0.35)); }
-
-        /* 首屏压暗层在底部淡出，避免与数据面板两侧出现明暗分界 */
-        .hero-veil {
-            -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
-            mask-image: linear-gradient(to bottom, #000 70%, transparent);
-        }
-
-        /* 导航：滚动后加深 + 当前板块高亮 */
-        #site-nav.is-scrolled {
-            background: rgba(5, 11, 20, 0.94);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-            border-color: rgba(0, 243, 255, 0.25);
-        }
-        .nav-link { position: relative; }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            left: 0; right: 0; bottom: -6px;
-            height: 2px;
-            border-radius: 2px;
-            background: #00f3ff;
-            box-shadow: 0 0 8px #00f3ff;
-            transform: scaleX(0);
-            transition: transform 0.25s ease;
-        }
-        .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
-        .nav-link.is-active { color: #00f3ff; }
-
-        /* 键盘焦点 */
-        a:focus-visible, button:focus-visible { outline: 2px solid #00f3ff; outline-offset: 3px; }
-
-        /* 滚动渐显 (仅在 JS 可用且未开启"减少动态效果"时) */
-        @media screen and (prefers-reduced-motion: no-preference) {
-            .js .reveal {
-                opacity: 0;
-                translate: 0 24px;
-                transition: opacity 0.7s ease var(--rd, 0ms), translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) var(--rd, 0ms),
-                            transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            }
-            .js .reveal.is-visible { opacity: 1; translate: 0 0; }
-        }
-
-        /* 尊重系统"减少动态效果"设置 */
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto !important; }
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            .scan-line { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="site.css">
 </head>
 <body class="antialiased font-sans selection:bg-neon-blue selection:text-black">
 
@@ -264,8 +90,9 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-6 lg:gap-8">
-                    <a href="#home" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">首页</a>
+                    <a href="#home" class="nav-link hidden lg:block text-sm text-gray-300 hover:text-neon-blue transition-colors">首页</a>
                     <a href="#research" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">核心研究</a>
+                    <a href="research.html" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">研究成果</a>
                     <a href="#timeline" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">发展历程</a>
                     <a href="#awards" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">荣誉成果</a>
                     <a href="#contact" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">加入我们</a>
@@ -286,6 +113,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
                 <a href="#home" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">首页</a>
                 <a href="#research" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">核心研究</a>
+                <a href="research.html" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">研究成果</a>
                 <a href="#timeline" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">发展历程</a>
                 <a href="#awards" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">荣誉成果</a>
                 <a href="#contact" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">加入我们</a>
@@ -532,6 +360,13 @@
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-glass text-xs font-mono text-gray-300"><i class="fa-solid fa-hospital text-bio-green" aria-hidden="true"></i>Smart Hospital Twin</span>
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-glass text-xs font-mono text-gray-300"><i class="fa-solid fa-capsules text-red-400" aria-hidden="true"></i>AI Drug Discovery</span>
                 </div>
+
+                <div class="mt-10 text-center reveal">
+                    <a href="research.html" class="group inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-neon-blue/40 bg-neon-blue/5 text-neon-blue hover:bg-neon-blue hover:text-deep-bg transition-all">
+                        查看研究成果与论文
+                        <i class="fa-solid fa-arrow-right text-sm transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -673,126 +508,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 移动端菜单：点击链接 / 点击外部 / Esc 均可收起
-            const toggle = document.getElementById('menu-toggle');
-            const menu = document.getElementById('mobile-menu');
-            if (toggle && menu) {
-                const icon = toggle.querySelector('i');
-                const setMenu = open => {
-                    menu.classList.toggle('hidden', !open);
-                    toggle.setAttribute('aria-expanded', String(open));
-                    icon.classList.toggle('fa-bars', !open);
-                    icon.classList.toggle('fa-xmark', open);
-                };
-                const isOpen = () => !menu.classList.contains('hidden');
-                toggle.addEventListener('click', () => setMenu(!isOpen()));
-                menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
-                document.addEventListener('click', e => {
-                    if (isOpen() && !menu.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
-                });
-                document.addEventListener('keydown', e => {
-                    if (e.key === 'Escape' && isOpen()) { setMenu(false); toggle.focus(); }
-                });
-            }
-
-            // 导航栏滚动态 + 背景网络随滚动渐暗 (提升正文可读性)
-            const nav = document.getElementById('site-nav');
-            const scrim = document.getElementById('bg-scrim');
-            // 当前板块高亮：取顶部越过视口 45% 的最后一个板块；滚到底时优先刚点击的锚点，否则为最后一个板块
-            const sections = ['home', 'research', 'timeline', 'awards', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
-            const navLinks = [...document.querySelectorAll('.nav-link')];
-            const updateActive = () => {
-                let current = sections[0];
-                sections.forEach(sec => { if (sec.getBoundingClientRect().top <= window.innerHeight * 0.45) current = sec; });
-                if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
-                    const target = document.getElementById(location.hash.slice(1));
-                    const top = target && sections.includes(target) ? target.getBoundingClientRect().top : -1;
-                    current = top >= 0 && top < window.innerHeight && target.id !== 'home' ? target : sections[sections.length - 1];
-                }
-                navLinks.forEach(l => l.classList.toggle('is-active', l.getAttribute('href') === '#' + current.id));
-            };
-            let ticking = false;
-            const onScroll = () => {
-                ticking = false;
-                nav.classList.toggle('is-scrolled', window.scrollY > 24);
-                scrim.style.opacity = Math.min(0.55, window.scrollY / window.innerHeight * 0.55).toFixed(3);
-                updateActive();
-            };
-            window.addEventListener('hashchange', updateActive);
-            window.addEventListener('resize', updateActive);
-            window.addEventListener('scroll', () => {
-                if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
-            }, { passive: true });
-            onScroll();
-
-            if ('IntersectionObserver' in window) {
-                // 滚动渐显 (同组元素依次出现)
-                const io = new IntersectionObserver(entries => entries.forEach(e => {
-                    if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-                }), { rootMargin: '0px 0px -8% 0px' });
-                document.querySelectorAll('.reveal').forEach(el => {
-                    const siblings = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
-                    el.style.setProperty('--rd', (siblings.indexOf(el) % 4) * 90 + 'ms');
-                    io.observe(el);
-                });
-            } else {
-                document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
-            }
-
-            const year = document.getElementById('year');
-            if (year) year.textContent = new Date().getFullYear();
-        });
-
-        // 动态网络背景：页面加载完成后再加载 three.js + Vanta，不阻塞首屏；
-        // 开启"减少动态效果"或省流量模式时跳过，保留静态渐变背景
-        (function () {
-            const mm = q => window.matchMedia && window.matchMedia(q).matches;
-            const hasWebGL = (() => {
-                try { const c = document.createElement('canvas'); return !!(c.getContext('webgl') || c.getContext('experimental-webgl')); }
-                catch (e) { return false; }
-            })();
-            if (!hasWebGL || mm('(prefers-reduced-motion: reduce)') || (navigator.connection && navigator.connection.saveData)) return;
-            const load = (src, integrity) => new Promise((resolve, reject) => {
-                const s = document.createElement('script');
-                s.src = src;
-                s.integrity = integrity;
-                s.crossOrigin = 'anonymous';
-                s.referrerPolicy = 'no-referrer';
-                s.onload = resolve;
-                s.onerror = reject;
-                document.head.appendChild(s);
-            });
-            const start = () => {
-                load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js', 'sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ==')
-                    .then(() => load('https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js', 'sha512-lH/5/byfwH0bqySiiSINJJoEoWFEBGKgOwsnAlZZPviNJI1DDBVXjPHgEkM0fowfOp6NMBAN4ROAYjx+uEkEjQ=='))
-                    .then(() => {
-                        const small = window.innerWidth < 768;
-                        window.vantaEffect = VANTA.NET({
-                            el: '#vanta-bg',
-                            mouseControls: true,
-                            touchControls: true,
-                            gyroControls: false,
-                            minHeight: 200.00,
-                            minWidth: 200.00,
-                            scale: 1.00,
-                            scaleMobile: 1.50,        // 手机端降低渲染分辨率，省电
-                            color: 0x00f3ff,          // 霓虹蓝
-                            backgroundColor: 0x050b14, // 深背景
-                            points: small ? 6.00 : 10.00,
-                            maxDistance: small ? 16.00 : 20.00,
-                            spacing: small ? 20.00 : 18.00,
-                            showDots: true
-                        });
-                    })
-                    .catch(e => console.warn('Vanta background skipped:', e));
-            };
-            if (document.readyState === 'complete') start();
-            else window.addEventListener('load', start);
-        })();
-    </script>
+    <script src="site.js"></script>
 </body>
 
 </html>
