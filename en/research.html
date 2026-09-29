@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>研究成果 | 医哲未来人工智能研究院 IMPF-AI</title>
-    <meta name="description" content="医哲未来人工智能研究院（IMPF-AI）研究成果：医学基础模型、中医人工智能、科研智能体与可信 AI for Science，代表项目 TCMScience、ZhongJingGPT、CMLM、TaoChronos、MedEthicsBench 及代表论文。">
+    <title>Research &amp; Publications | IMPF-AI Institute</title>
+    <meta name="description" content="Research and publications of IMPF-AI Institute: medical foundation models, Traditional Chinese Medicine AI, scientific agents and trustworthy AI for Science — featuring TCMScience, ZhongJingGPT, CMLM, TaoChronos and MedEthicsBench.">
 
     <!-- 网站图标 -->
-    <link rel="icon" href="favicon.ico" sizes="32x32">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
     <meta name="theme-color" content="#050b14">
     <meta name="color-scheme" content="dark">
 
     <!-- 分享卡片 & 搜索引擎 (启用 HTTPS 后把 http:// 改为 https://) -->
-    <link rel="canonical" href="http://impf.ai/research.html">
+    <link rel="canonical" href="http://impf.ai/en/research.html">
     <link rel="alternate" hreflang="zh-CN" href="http://impf.ai/research.html">
     <link rel="alternate" hreflang="en" href="http://impf.ai/en/research.html">
     <link rel="alternate" hreflang="x-default" href="http://impf.ai/research.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="IMPF-AI Institute">
-    <meta property="og:locale" content="zh_CN">
-    <meta property="og:url" content="http://impf.ai/research.html">
-    <meta property="og:title" content="研究成果 | 医哲未来人工智能研究院 IMPF-AI">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="http://impf.ai/en/research.html">
+    <meta property="og:title" content="Research &amp; Publications | IMPF-AI Institute">
     <meta property="og:description" content="Medical AI → TCM Large Language Models → Scientific Agents → Autonomous Science">
     <meta property="og:image" content="http://impf.ai/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="研究成果 | 医哲未来人工智能研究院 IMPF-AI">
+    <meta name="twitter:title" content="Research &amp; Publications | IMPF-AI Institute">
     <meta name="twitter:description" content="Medical AI → TCM Large Language Models → Scientific Agents → Autonomous Science">
     <meta name="twitter:image" content="http://impf.ai/og-image.png">
 
@@ -41,7 +41,7 @@
 
     <!-- Tailwind CSS (固定版本) -->
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-    <script src="tw-config.js"></script>
+    <script src="../tw-config.js"></script>
 
     <!-- Google Fonts：异步加载 -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
@@ -50,11 +50,11 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="../site.css">
 </head>
 <body class="antialiased font-sans selection:bg-neon-blue selection:text-black">
 
-    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded focus:bg-neon-blue focus:text-deep-bg focus:font-bold">跳到主要内容</a>
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:px-4 focus:py-2 focus:rounded focus:bg-neon-blue focus:text-deep-bg focus:font-bold">Skip to main content</a>
 
     <!-- 背景层 -->
     <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full -z-10" aria-hidden="true"></div>
@@ -62,12 +62,12 @@
     <div class="scan-line" aria-hidden="true"></div>
 
     <!-- 导航栏 -->
-    <nav id="site-nav" aria-label="主导航" class="fixed w-full z-50 top-0 left-0 border-b border-glass-border bg-deep-bg/70 backdrop-blur-md transition-all duration-300">
+    <nav id="site-nav" aria-label="Main navigation" class="fixed w-full z-50 top-0 left-0 border-b border-glass-border bg-deep-bg/70 backdrop-blur-md transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center group select-none">
-                    <img src="logo-mark.svg" width="40" height="40" alt="" class="w-10 h-10 mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_6px_rgba(0,243,255,0.45)]">
+                    <img src="../logo-mark.svg" width="40" height="40" alt="" class="w-10 h-10 mr-3 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_6px_rgba(0,243,255,0.45)]">
                     <span class="flex flex-col">
                         <span class="font-scifi font-bold text-lg tracking-wider text-white leading-none">IMPF<span class="text-neon-blue">-AI</span></span>
                         <span class="text-[10px] text-gray-400 font-mono tracking-widest">INSTITUTE</span>
@@ -76,20 +76,20 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-4 lg:gap-8">
-                    <a href="index.html" class="nav-link hidden lg:block text-sm text-gray-300 hover:text-neon-blue transition-colors">首页</a>
-                    <a href="index.html#research" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">核心研究</a>
-                    <a href="research.html" class="nav-link is-active text-sm text-gray-300 hover:text-neon-blue transition-colors" aria-current="page">研究成果</a>
-                    <a href="index.html#timeline" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">发展历程</a>
-                    <a href="index.html#awards" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">荣誉成果</a>
-                    <a href="index.html#contact" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">加入我们</a>
-                    <a href="en/research.html" hreflang="en" lang="en" class="inline-flex items-center px-2.5 py-1.5 rounded border border-white/15 text-gray-300 hover:text-neon-blue hover:border-neon-blue/60 transition-colors font-mono text-xs" aria-label="English version">EN</a>
+                    <a href="index.html" class="nav-link hidden lg:block text-sm text-gray-300 hover:text-neon-blue transition-colors">Home</a>
+                    <a href="index.html#research" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">Research</a>
+                    <a href="research.html" class="nav-link is-active text-sm text-gray-300 hover:text-neon-blue transition-colors" aria-current="page">Publications</a>
+                    <a href="index.html#timeline" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">Timeline</a>
+                    <a href="index.html#awards" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">Awards</a>
+                    <a href="index.html#contact" class="nav-link text-sm text-gray-300 hover:text-neon-blue transition-colors">Join Us</a>
+                    <a href="../research.html" hreflang="zh-CN" lang="zh-CN" class="inline-flex items-center px-2.5 py-1.5 rounded border border-white/15 text-gray-300 hover:text-neon-blue hover:border-neon-blue/60 transition-colors font-mono text-xs" aria-label="中文版">中文</a>
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-black transition-all font-scifi text-xs">
                         <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GITHUB
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="menu-toggle" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 text-neon-blue text-2xl hover:text-white transition-colors" aria-label="切换导航菜单" aria-expanded="false" aria-controls="mobile-menu">
+                <button id="menu-toggle" type="button" class="md:hidden inline-flex items-center justify-center w-11 h-11 text-neon-blue text-2xl hover:text-white transition-colors" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
                 </button>
             </div>
@@ -98,13 +98,13 @@
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-deep-bg border-b border-glass-border absolute w-full left-0 top-20 shadow-2xl">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                <a href="index.html" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">首页</a>
-                <a href="index.html#research" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">核心研究</a>
-                <a href="research.html" class="block px-3 py-3 text-sm text-neon-blue bg-white/5 rounded" aria-current="page">研究成果</a>
-                <a href="index.html#timeline" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">发展历程</a>
-                <a href="index.html#awards" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">荣誉成果</a>
-                <a href="index.html#contact" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">加入我们</a>
-                <a href="en/research.html" hreflang="en" lang="en" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">English</a>
+                <a href="index.html" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">Home</a>
+                <a href="index.html#research" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">Research</a>
+                <a href="research.html" class="block px-3 py-3 text-sm text-neon-blue bg-white/5 rounded" aria-current="page">Publications</a>
+                <a href="index.html#timeline" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">Timeline</a>
+                <a href="index.html#awards" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">Awards</a>
+                <a href="index.html#contact" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">Join Us</a>
+                <a href="../research.html" hreflang="zh-CN" lang="zh-CN" class="block px-3 py-3 text-sm text-gray-300 hover:text-neon-blue hover:bg-white/5 rounded">中文</a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="block px-3 py-3 font-scifi text-sm text-neon-blue hover:text-white hover:bg-neon-blue/10 rounded">
                     <i class="fa-brands fa-github mr-2" aria-hidden="true"></i>GITHUB
                 </a>
@@ -125,21 +125,21 @@
                     <span class="w-2 h-2 bg-bio-green rounded-full mr-2 animate-pulse" aria-hidden="true"></span>
                     RESEARCH &amp; PUBLICATIONS
                 </div>
-                <h1 class="font-scifi text-[clamp(2.25rem,11vw,3rem)] sm:text-5xl md:text-6xl font-black leading-tight text-white mb-6">
-                    研究成果<br>
-                    <span class="text-gradient-purple text-[clamp(1.5rem,7vw,2.25rem)] sm:text-4xl md:text-5xl">医疗 AI 与 AI for Science</span>
+                <h1 class="font-scifi text-[clamp(1.9rem,8.5vw,3rem)] sm:text-5xl md:text-6xl font-black leading-tight text-white mb-6 text-balance">
+                    Research &amp; Publications<br>
+                    <span class="text-gradient-purple text-[clamp(1.5rem,7vw,2.25rem)] sm:text-4xl md:text-5xl">Medical AI &amp; AI for Science</span>
                 </h1>
                 <div class="max-w-3xl space-y-4 text-gray-300 text-base md:text-lg font-light leading-relaxed text-pretty">
                     <p>
-                        医哲未来人工智能研究院的研究聚焦于<span class="text-neon-blue font-semibold whitespace-nowrap">医疗人工智能</span>、<span class="text-neon-violet font-semibold whitespace-nowrap">传统医学大语言模型</span>、<span class="text-bio-green font-semibold whitespace-nowrap">可信智能体</span>与 <span class="text-white font-semibold whitespace-nowrap">AI for Science</span>，致力于探索人工智能如何从医学知识理解与辅助决策，进一步发展为能够进行证据检索、科学推理、知识发现与自主研究的智能系统。
+                        IMPF-AI’s research focuses on <span class="text-neon-blue font-semibold whitespace-nowrap">medical artificial intelligence</span>, <span class="text-neon-violet font-semibold">large language models for traditional medicine</span>, <span class="text-bio-green font-semibold whitespace-nowrap">trustworthy agents</span> and <span class="text-white font-semibold whitespace-nowrap">AI for Science</span>. We study how AI can move beyond understanding medical knowledge and supporting decisions, toward intelligent systems that retrieve evidence, reason scientifically, discover knowledge and conduct research autonomously.
                     </p>
                     <p class="text-gray-400 text-base">
-                        研究团队具有医学、传统医学与人工智能交叉背景，近年来逐步形成以下述路径为核心的研究方向：
+                        Our team works at the intersection of medicine, traditional medicine and artificial intelligence, and in recent years our research has converged on the following path:
                     </p>
                 </div>
 
                 <!-- 研究路径 -->
-                <ol class="mt-6 flex flex-wrap items-center gap-2 md:gap-3 font-mono text-xs md:text-sm" aria-label="研究发展路径">
+                <ol class="mt-6 flex flex-wrap items-center gap-2 md:gap-3 font-mono text-xs md:text-sm" aria-label="Research path">
                     <li class="px-3 py-1.5 rounded-full border border-neon-blue/40 bg-neon-blue/5 text-neon-blue">Medical AI</li>
                     <li class="text-gray-500" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></li>
                     <li class="px-3 py-1.5 rounded-full border border-neon-purple/40 bg-neon-purple/5 text-neon-violet">TCM Large Language Models</li>
@@ -150,15 +150,15 @@
                 </ol>
 
                 <!-- 页内导航 -->
-                <nav aria-label="本页目录" class="mt-10 flex flex-wrap gap-2">
-                    <a href="#focus" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">研究方向</a>
-                    <a href="#projects" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">代表项目</a>
-                    <a href="#discovery" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">知识发现</a>
-                    <a href="#science-of-science" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">AI 与科学学</a>
-                    <a href="#clinical" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">生物医学与临床</a>
-                    <a href="#roadmap" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">研究路径</a>
-                    <a href="#publications" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">代表论文</a>
-                    <a href="#direction" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">研究院方向</a>
+                <nav aria-label="On this page" class="mt-10 flex flex-wrap gap-2">
+                    <a href="#focus" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Focus</a>
+                    <a href="#projects" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Projects</a>
+                    <a href="#discovery" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Knowledge Discovery</a>
+                    <a href="#science-of-science" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Science of Science</a>
+                    <a href="#clinical" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Clinical Research</a>
+                    <a href="#roadmap" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Roadmap</a>
+                    <a href="#publications" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Publications</a>
+                    <a href="#direction" class="px-3 py-1.5 rounded-md border border-white/10 bg-white/[0.03] text-xs text-gray-300 hover:text-neon-blue hover:border-neon-blue/50 transition-colors">Our Direction</a>
                 </nav>
             </div>
         </header>
@@ -168,9 +168,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-neon-blue" aria-hidden="true">///</span> 研究方向
+                        <span class="text-neon-blue" aria-hidden="true">///</span> Research Focus
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">RESEARCH FOCUS</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">研究方向</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -183,7 +183,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-1">Medical Foundation Models</h3>
                         <p class="text-neon-blue text-sm mb-3">医学基础模型</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">面向医学与传统医学场景构建专业大语言模型，研究知识增强、领域指令学习、多轮临床推理、模型评测以及医疗 AI 安全与可信性。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Building specialized large language models for medicine and traditional medicine, with research on knowledge enhancement, domain instruction learning, multi-turn clinical reasoning, model evaluation, and the safety and trustworthiness of medical AI.</p>
                     </article>
 
                     <article class="holo-card reveal p-6 md:p-8 rounded-2xl group" style="--accent: 188, 19, 254">
@@ -195,7 +195,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-1">Traditional Chinese Medicine AI</h3>
                         <p class="text-neon-violet text-sm mb-3">中医人工智能</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">推动传统医学知识从非结构化古籍、临床文本与专家经验向可计算知识体系转化，探索中医大模型、知识图谱、多模态数据和智能问诊系统。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Turning traditional medical knowledge — from unstructured classical texts, clinical records and expert experience — into computable knowledge systems, exploring TCM foundation models, knowledge graphs, multimodal data and intelligent consultation systems.</p>
                     </article>
 
                     <article class="holo-card reveal p-6 md:p-8 rounded-2xl group" style="--accent: 0, 255, 157">
@@ -207,7 +207,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-1">Scientific Agents</h3>
                         <p class="text-bio-green text-sm mb-3">科研智能体</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">研究能够自主完成文献检索、数据库调用、假设生成、计算分析、证据验证和研究报告生成的科研智能体。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Research agents that autonomously perform literature search, database queries, hypothesis generation, computational analysis, evidence verification and research-report writing.</p>
                     </article>
 
                     <article class="holo-card reveal p-6 md:p-8 rounded-2xl group" style="--accent: 255, 255, 255">
@@ -219,7 +219,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-white mb-1">Trustworthy AI for Science</h3>
                         <p class="text-gray-300 text-sm mb-3">可信科学智能</p>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-4">探索模型、工具、数据、证据与科学结论之间的可信约束机制，使人工智能不仅能够“生成答案”，还能够说明：</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4">Trust constraints linking models, tools, data, evidence and scientific conclusions — so that AI does not merely “generate answers” but can also explain:</p>
                         <ul class="space-y-2 font-mono text-xs md:text-sm text-gray-200">
                             <li class="flex gap-2"><i class="fa-solid fa-magnifying-glass text-neon-blue mt-0.5" aria-hidden="true"></i>What evidence supports the claim?</li>
                             <li class="flex gap-2"><i class="fa-solid fa-link text-neon-violet mt-0.5" aria-hidden="true"></i>Where did the evidence come from?</li>
@@ -235,9 +235,9 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-neon-purple" aria-hidden="true">///</span> 代表项目
+                        <span class="text-neon-purple" aria-hidden="true">///</span> Selected Research &amp; Projects
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">SELECTED RESEARCH &amp; PROJECTS</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">代表项目</p>
                 </div>
 
                 <!-- TCMScience (重点项目) -->
@@ -252,16 +252,16 @@
                             <h3 class="font-scifi text-3xl md:text-4xl font-bold text-white mb-2">TCMScience</h3>
                             <p class="text-neon-blue text-sm md:text-base mb-5">A Governed Autonomous Scientist for Traditional Chinese Medicine &amp; Biomedicine</p>
                             <div class="space-y-4 text-gray-300 text-sm md:text-base leading-relaxed text-pretty">
-                                <p>TCMScience 是 IMPF-AI 正在开发的自主科研智能体系统，目标是让人工智能从传统的医学问答系统进一步发展成为能够执行科研流程的 AI Scientist。</p>
-                                <p class="text-gray-400">系统将语言模型的推理能力与独立的可信执行和证据治理机制分离，并将预测、实验结果、古籍证据、临床研究与数据库信息作为不同类型的科学证据处理，而不是简单转化为语言模型上下文。</p>
+                                <p>TCMScience is an autonomous research-agent system under development at IMPF-AI. Its goal is to take AI beyond medical question answering and turn it into an AI Scientist that can carry out research workflows.</p>
+                                <p class="text-gray-400">The system separates the language model’s reasoning from independent mechanisms for trusted execution and evidence governance. Predictions, experimental results, classical-text evidence, clinical studies and database records are handled as distinct types of scientific evidence rather than simply flattened into model context.</p>
                             </div>
                             <blockquote class="mt-6 border-l-2 border-neon-purple pl-4 py-1">
-                                <p class="text-xs font-mono text-gray-400 mb-1 tracking-wider">核心原则 / CORE PRINCIPLE</p>
+                                <p class="text-xs font-mono text-gray-400 mb-1 tracking-wider">CORE PRINCIPLE</p>
                                 <p class="font-mono text-sm md:text-base text-white">“The model may reason. It does not define the laws of the laboratory.”</p>
                             </blockquote>
                         </div>
                         <div class="lg:col-span-2">
-                            <p class="text-xs font-mono text-gray-400 tracking-widest mb-4">科研基础设施能力</p>
+                            <p class="text-xs font-mono text-gray-400 tracking-widest mb-4">RESEARCH INFRASTRUCTURE CAPABILITIES</p>
                             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 font-mono text-xs md:text-sm text-gray-200">
                                 <li class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/10"><i class="fa-solid fa-diagram-project w-4 text-neon-blue" aria-hidden="true"></i>autonomous scientific planning</li>
                                 <li class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/10"><i class="fa-solid fa-database w-4 text-neon-blue" aria-hidden="true"></i>biomedical database interaction</li>
@@ -285,7 +285,7 @@
                         </div>
                         <h3 class="font-scifi text-2xl font-bold text-white mb-1">ZhongJingGPT</h3>
                         <p class="text-neon-violet text-sm mb-4">Expert Knowledge-Guided Language Model for Traditional Chinese Medicine</p>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-4 text-pretty">面向传统中医知识与临床推理的大语言模型研究，相关工作发表于 <span class="text-gray-200">Tsinghua Science and Technology</span>。研究围绕中医诊疗特点构建多任务知识指令，并进一步引入：</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 text-pretty">A large language model for Traditional Chinese Medicine knowledge and clinical reasoning, published in <span class="text-gray-200">Tsinghua Science and Technology</span>. It builds multi-task knowledge instructions around the characteristics of TCM diagnosis and treatment, and introduces:</p>
                         <ul class="space-y-1.5 font-mono text-xs text-gray-300 mb-4">
                             <li class="flex gap-2"><span class="text-neon-violet" aria-hidden="true">▸</span>TCM knowledge instruction tuning</li>
                             <li class="flex gap-2"><span class="text-neon-violet" aria-hidden="true">▸</span>multi-scenario clinical reasoning</li>
@@ -293,7 +293,7 @@
                             <li class="flex gap-2"><span class="text-neon-violet" aria-hidden="true">▸</span>MedicalFSM multi-turn evaluation</li>
                             <li class="flex gap-2"><span class="text-neon-violet" aria-hidden="true">▸</span>expert-based clinical assessment</li>
                         </ul>
-                        <p class="text-gray-400 text-sm leading-relaxed text-pretty mt-auto">该研究尝试解决通用语言模型在中医场景中存在的知识不足、辨证推理不稳定以及复杂诊疗过程难以持续建模等问题，也成为后续 IMPF-AI 中医模型研究的重要基础之一。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed text-pretty mt-auto">It addresses the gaps of general-purpose LLMs in TCM — insufficient domain knowledge, unstable syndrome-differentiation reasoning, and difficulty modeling complex, multi-step treatment — and has become a foundation for IMPF-AI’s subsequent TCM model research.</p>
                     </article>
 
                     <!-- CMLM -->
@@ -304,7 +304,7 @@
                         </div>
                         <h3 class="font-scifi text-2xl font-bold text-white mb-1">CMLM</h3>
                         <p class="text-bio-green text-sm mb-4">Open Chinese Medical Language Models</p>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-4 text-pretty">IMPF-AI 持续推动中医人工智能模型、数据集与评测资源开放。CMLM 开源生态目前覆盖多个中医语言模型与数据资源，包括：</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-4 text-pretty">IMPF-AI continues to open-source TCM AI models, datasets and evaluation resources. The CMLM ecosystem currently spans multiple TCM language models and data resources, including:</p>
                         <ul class="flex flex-wrap gap-2 mb-5">
                             <li class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">ZhongJingGPT</li>
                             <li class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">Zhongjing series</li>
@@ -314,7 +314,7 @@
                             <li class="text-[11px] font-mono border border-white/10 bg-white/[0.03] px-2.5 py-1 rounded-md text-gray-300">evaluation datasets</li>
                         </ul>
                         <div class="mt-auto">
-                            <p class="text-gray-400 text-sm leading-relaxed mb-3">研究目标并非建立单一模型，而是探索一个共同组成的开放中医 AI 基础设施：</p>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-3">The goal is not a single model, but an open TCM AI infrastructure built from:</p>
                             <p class="font-mono text-xs md:text-sm text-white px-3 py-2 rounded-lg border border-bio-green/30 bg-bio-green/5 text-center">Models + Data + Knowledge + Benchmarks + Agents</p>
                         </div>
                     </article>
@@ -327,7 +327,7 @@
                         </div>
                         <h3 class="font-scifi text-2xl font-bold text-white mb-1">TaoChronos</h3>
                         <p class="text-yellow-500 text-sm mb-4">AI Agent for Knowledge Discovery from Ancient Medical Literature</p>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-3 text-pretty">面向大规模中医古籍知识发现，尝试将古籍研究从传统关键词检索推进至：</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-3 text-pretty">Knowledge discovery across large collections of classical TCM literature, moving beyond keyword search toward:</p>
                         <ol class="font-mono text-xs text-gray-200 mb-4 space-y-1">
                             <li class="px-3 py-1.5 rounded-md bg-white/[0.03] border border-white/10">Ancient Literature</li>
                             <li class="pl-3 text-gray-500" aria-hidden="true">↓</li>
@@ -337,7 +337,7 @@
                             <li class="pl-3 text-gray-500" aria-hidden="true">↓</li>
                             <li class="px-3 py-1.5 rounded-md border border-yellow-500/40 bg-yellow-500/5 text-yellow-200">Modern Biomedical Interpretation</li>
                         </ol>
-                        <p class="text-xs font-mono text-gray-400 tracking-wider mb-2">重点研究方向</p>
+                        <p class="text-xs font-mono text-gray-400 tracking-wider mb-2">KEY RESEARCH DIRECTIONS</p>
                         <ul class="space-y-1.5 font-mono text-xs text-gray-300 mb-4">
                             <li class="flex gap-2"><span class="text-yellow-500" aria-hidden="true">▸</span>ancient medical literature mining</li>
                             <li class="flex gap-2"><span class="text-yellow-500" aria-hidden="true">▸</span>textual variant comparison</li>
@@ -347,7 +347,7 @@
                             <li class="flex gap-2"><span class="text-yellow-500" aria-hidden="true">▸</span>evidence-grounded retrieval</li>
                             <li class="flex gap-2"><span class="text-yellow-500" aria-hidden="true">▸</span>historical medical knowledge discovery</li>
                         </ul>
-                        <p class="text-gray-400 text-sm leading-relaxed text-pretty mt-auto">其中 <span class="text-gray-200">Ancient–Modern Bridge Engine</span> 用于探索古代医学概念与现代疾病、表型及生物医学知识之间的可解释连接。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed text-pretty mt-auto">Its <span class="text-gray-200">Ancient–Modern Bridge Engine</span> explores interpretable links between classical medical concepts and modern diseases, phenotypes and biomedical knowledge.</p>
                     </article>
                 </div>
 
@@ -361,7 +361,7 @@
                         </div>
                         <h3 class="font-scifi text-2xl font-bold text-white mb-1">MedEthicsBench</h3>
                         <p class="text-blue-300 text-sm mb-4">Evaluating Medical Ethics Reasoning Across Jurisdictions</p>
-                        <p class="text-gray-400 text-sm leading-relaxed text-pretty">面向医学伦理推理的评测数据集研究，关注大语言模型在不同司法管辖区——即法律制度与伦理规范各不相同的国家和地区——进行医学伦理判断与推理的能力。相关工作发表于 <span class="text-gray-200">2026 IEEE International Conference on Digital Health (ICDH)</span>，是 IMPF-AI 在医疗 AI 安全与可信性方向的研究之一。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed text-pretty">A benchmark dataset for medical ethics reasoning that examines how well large language models make ethical judgments across jurisdictions — countries and regions whose legal systems and ethical norms differ. Published at the <span class="text-gray-200">2026 IEEE International Conference on Digital Health (ICDH)</span>, it is part of IMPF-AI’s work on the safety and trustworthiness of medical AI.</p>
                     </div>
                     <ul class="space-y-2 font-mono text-xs md:text-sm text-gray-200">
                         <li class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/[0.03] border border-white/10"><i class="fa-solid fa-user-doctor w-4 text-blue-400" aria-hidden="true"></i>medical ethics reasoning</li>
@@ -377,26 +377,26 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-bio-green" aria-hidden="true">///</span> 医学知识发现
+                        <span class="text-bio-green" aria-hidden="true">///</span> AI for Medical Knowledge Discovery
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">AI FOR MEDICAL KNOWLEDGE DISCOVERY</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">医学知识发现</p>
                 </div>
 
                 <article class="holo-card holo-static reveal rounded-2xl p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <div>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-5 text-pretty">除大语言模型与智能体研究外，研究院还开展医学数据科学与 AI 驱动知识发现研究。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-5 text-pretty">Beyond large language models and agents, the institute also works on medical data science and AI-driven knowledge discovery.</p>
                         <div class="flex items-center justify-between mb-2">
                             <h3 class="font-scifi text-2xl font-bold text-white">AgenTopic</h3>
                             <span class="text-[11px] font-mono text-gray-400">J. Invest. Dermatol. · 2025</span>
                         </div>
-                        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-pretty">发表于 <span class="text-white">Journal of Investigative Dermatology</span> 的相关研究提出自动调优主题模型 AgenTopic，用于分析大规模银屑病科研文献，并识别研究热点及长期演化趋势。</p>
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-pretty">Published in <span class="text-white">Journal of Investigative Dermatology</span>, AgenTopic is an auto-tuned topic model that analyzes large-scale psoriasis literature to identify research hotspots and their long-term evolution.</p>
                         <blockquote class="mt-6 border-l-2 border-bio-green pl-4 py-1">
-                            <p class="text-xs font-mono text-gray-400 mb-1 tracking-wider">研究问题 / RESEARCH QUESTION</p>
+                            <p class="text-xs font-mono text-gray-400 mb-1 tracking-wider">RESEARCH QUESTION</p>
                             <p class="font-mono text-sm md:text-base text-white">Can AI help scientists discover the structure of scientific knowledge itself?</p>
                         </blockquote>
                     </div>
                     <div>
-                        <p class="text-xs font-mono text-gray-400 tracking-widest mb-4">系统结合</p>
+                        <p class="text-xs font-mono text-gray-400 tracking-widest mb-4">THE SYSTEM COMBINES</p>
                         <ol class="space-y-2 font-mono text-xs md:text-sm text-gray-200">
                             <li class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-white/[0.03] border border-white/10"><span class="text-bio-green w-6">01</span>Transformer-based semantic embeddings</li>
                             <li class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-white/[0.03] border border-white/10"><span class="text-bio-green w-6">02</span>dimensionality reduction</li>
@@ -414,12 +414,12 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-neon-blue" aria-hidden="true">///</span> AI 与科学学
+                        <span class="text-neon-blue" aria-hidden="true">///</span> AI &amp; Science of Science
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">AI &amp; SCIENCE OF SCIENCE</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">AI 与科学学</p>
                 </div>
 
-                <p class="max-w-3xl mx-auto text-center text-gray-300 text-sm md:text-base leading-relaxed mb-10 reveal">IMPF-AI 同时关注人工智能如何改变科学研究和同行评议体系。</p>
+                <p class="max-w-3xl mx-auto text-center text-gray-300 text-sm md:text-base leading-relaxed mb-10 reveal">IMPF-AI also studies how artificial intelligence is changing scientific research and peer review.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <article class="holo-card reveal p-6 md:p-8 rounded-2xl">
@@ -428,7 +428,7 @@
                             <span class="text-[11px] font-mono text-gray-400">J. Informetrics · 2025</span>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3">Reviewer–Author Intellectual Proximity</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed text-pretty">发表于 <span class="text-gray-200">Journal of Informetrics</span> 的研究分析审稿人与作者研究文本相似性和知识距离与同行评议行为之间的关系。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed text-pretty">A study in <span class="text-gray-200">Journal of Informetrics</span> analyzing how textual similarity and intellectual distance between reviewers’ and authors’ research relate to peer-review behavior.</p>
                     </article>
                     <article class="holo-card reveal p-6 md:p-8 rounded-2xl" style="--accent: 188, 19, 254">
                         <div class="flex items-center justify-between mb-4">
@@ -436,12 +436,12 @@
                             <span class="text-[11px] font-mono text-gray-400">Scientometrics · 2026</span>
                         </div>
                         <h3 class="text-xl font-bold text-white mb-3">Large Language Models and Peer Review</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed text-pretty">发表于 <span class="text-gray-200">Scientometrics</span> 的研究进一步评估大型语言模型能否判断同行评议报告质量，并探讨 AI 在未来科研评价系统中的能力边界。</p>
+                        <p class="text-gray-400 text-sm leading-relaxed text-pretty">A study in <span class="text-gray-200">Scientometrics</span> evaluating whether large language models can judge the quality of peer-review reports, and exploring the limits of AI in future research-evaluation systems.</p>
                     </article>
                 </div>
 
                 <div class="mt-10 text-center reveal">
-                    <p class="text-gray-400 text-sm mb-3">这些工作将人工智能研究扩展至：</p>
+                    <p class="text-gray-400 text-sm mb-3">Together, this work extends AI research to:</p>
                     <p class="inline-block font-mono text-sm md:text-base text-white px-4 py-2 rounded-lg border border-glass-border bg-glass">AI × Scientific Discovery × Peer Review × Knowledge Production</p>
                 </div>
             </div>
@@ -452,15 +452,15 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-neon-purple" aria-hidden="true">///</span> 生物医学与临床研究
+                        <span class="text-neon-purple" aria-hidden="true">///</span> Biomedical &amp; Clinical Research
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">BIOMEDICAL &amp; CLINICAL RESEARCH</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">生物医学与临床研究</p>
                 </div>
 
                 <article class="holo-card holo-static reveal rounded-2xl p-6 md:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     <div class="space-y-4 text-gray-300 text-sm md:text-base leading-relaxed text-pretty">
-                        <p>IMPF-AI 的人工智能研究并非脱离医学问题本身。研究团队亦参与传统医学、肿瘤、生物信息学及真实世界医学研究。</p>
-                        <p class="text-gray-400">早期研究还探索了血管生成相关分子特征、肿瘤预后以及免疫治疗响应等问题。这种医学研究背景构成了 IMPF-AI 的一个基本理念：</p>
+                        <p>IMPF-AI’s AI research is never detached from medicine itself. The team also contributes to research in traditional medicine, oncology, bioinformatics and real-world medical data.</p>
+                        <p class="text-gray-400">Earlier work explored angiogenesis-related molecular signatures, tumor prognosis and immunotherapy response. This medical research background underpins a core IMPF-AI principle:</p>
                         <blockquote class="border-l-2 border-neon-purple pl-4 py-1">
                             <p class="font-mono text-sm md:text-base text-white">“Medical AI should be built around scientific and clinical questions — not around models alone.”</p>
                         </blockquote>
@@ -482,12 +482,12 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-bio-green" aria-hidden="true">///</span> 研究路径
+                        <span class="text-bio-green" aria-hidden="true">///</span> From Medical AI to Autonomous Science
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">FROM MEDICAL AI TO AUTONOMOUS SCIENCE</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">研究路径</p>
                 </div>
 
-                <p class="max-w-3xl mx-auto text-center text-gray-300 text-sm md:text-base leading-relaxed mb-10 reveal">IMPF-AI 的研究路径正在从医疗领域模型逐渐延伸至自主科学研究系统：</p>
+                <p class="max-w-3xl mx-auto text-center text-gray-300 text-sm md:text-base leading-relaxed mb-10 reveal">IMPF-AI’s research is extending from domain models for medicine toward autonomous scientific research systems:</p>
 
                 <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 reveal">
                     <li class="relative rounded-xl p-4 bg-white/[0.03] border border-white/10 overflow-hidden"><div class="absolute inset-x-0 top-0 h-0.5 bg-neon-blue" aria-hidden="true"></div><div class="font-mono text-xs text-neon-blue mb-2">01</div><div class="text-white font-semibold text-sm">Medical Knowledge</div></li>
@@ -500,7 +500,7 @@
 
                 <div class="mt-10 max-w-4xl mx-auto holo-card holo-static reveal rounded-2xl p-6 md:p-8">
                     <p class="text-xs font-mono text-neon-blue tracking-widest mb-3">LONG-TERM GOAL · AI SCIENTIST INFRASTRUCTURE</p>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-pretty">长期目标是建立能够与研究者共同工作的 <span class="text-white font-semibold">AI Scientist Infrastructure</span>：它能够阅读文献、连接数据库、调用科学工具、执行计算实验、生成假设并验证证据，同时保留完整的数据来源和推理边界。</p>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-pretty">The long-term goal is an <span class="text-white font-semibold">AI Scientist Infrastructure</span> that works alongside researchers: reading literature, connecting to databases, calling scientific tools, running computational experiments, generating hypotheses and verifying evidence — while preserving complete data provenance and clear reasoning boundaries.</p>
                 </div>
             </div>
         </section>
@@ -510,46 +510,46 @@
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14 reveal">
                     <h2 class="font-scifi text-[clamp(1.5rem,8vw,1.875rem)] md:text-4xl font-bold mb-4 text-white">
-                        <span class="text-neon-blue" aria-hidden="true">///</span> 代表论文
+                        <span class="text-neon-blue" aria-hidden="true">///</span> Selected Publications
                     </h2>
-                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">SELECTED PUBLICATIONS</p>
+                    <p class="text-gray-400 font-mono text-xs md:text-sm tracking-widest">代表论文</p>
                 </div>
 
                 <ol class="space-y-4">
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-neon-blue/40 bg-neon-blue/5 text-neon-blue">2026</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">MedEthicsBench: Evaluating Medical Ethics Reasoning Across Jurisdictions</h3><p class="text-gray-400 text-sm"><span class="italic">2026 IEEE International Conference on Digital Health (ICDH)</span> <span class="whitespace-nowrap">（<span class="font-mono text-blue-300">IEEE 国际会议</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">MedEthicsBench: Evaluating Medical Ethics Reasoning Across Jurisdictions</h3><p class="text-gray-400 text-sm"><span class="italic">2026 IEEE International Conference on Digital Health (ICDH)</span> <span class="whitespace-nowrap">(<span class="font-mono text-blue-300">IEEE Conference</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-neon-blue/40 bg-neon-blue/5 text-neon-blue">2026</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">ZhongJingGPT: An Expert Knowledge-Guided Language Model for Traditional Chinese Medicine</h3><p class="text-gray-400 text-sm"><span class="italic">Tsinghua Science and Technology</span> <span class="whitespace-nowrap">（<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 5.4</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">ZhongJingGPT: An Expert Knowledge-Guided Language Model for Traditional Chinese Medicine</h3><p class="text-gray-400 text-sm"><span class="italic">Tsinghua Science and Technology</span> <span class="whitespace-nowrap">(<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 5.4</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-neon-purple/40 bg-neon-purple/5 text-neon-violet">2025</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">Identifying Research Hotspots and Trends in Psoriasis Literature: Autotuned Topic Modeling with Agent</h3><p class="text-gray-400 text-sm"><span class="italic">Journal of Investigative Dermatology</span> <span class="whitespace-nowrap">（<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 7.0</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">Identifying Research Hotspots and Trends in Psoriasis Literature: Autotuned Topic Modeling with Agent</h3><p class="text-gray-400 text-sm"><span class="italic">Journal of Investigative Dermatology</span> <span class="whitespace-nowrap">(<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 7.0</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-neon-purple/40 bg-neon-purple/5 text-neon-violet">2025</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">Investigating the Effect of Publication Text Similarity Between Reviewers and Authors on the Rigor of Peer Review</h3><p class="text-gray-400 text-sm"><span class="italic">Journal of Informetrics</span> <span class="whitespace-nowrap">（<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 3.9</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">Investigating the Effect of Publication Text Similarity Between Reviewers and Authors on the Rigor of Peer Review</h3><p class="text-gray-400 text-sm"><span class="italic">Journal of Informetrics</span> <span class="whitespace-nowrap">(<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 3.9</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-neon-blue/40 bg-neon-blue/5 text-neon-blue">2026</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">Can Large Language Models Assess the Quality of Peer Review? An Empirical Study</h3><p class="text-gray-400 text-sm"><span class="italic">Scientometrics</span> <span class="whitespace-nowrap">（<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 3.8</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">Can Large Language Models Assess the Quality of Peer Review? An Empirical Study</h3><p class="text-gray-400 text-sm"><span class="italic">Scientometrics</span> <span class="whitespace-nowrap">(<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 3.8</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-neon-purple/40 bg-neon-purple/5 text-neon-violet">2025</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">Impact of Traditional Chinese Medicine Therapy Focused on Strengthening the Body in Stage IIIA Non-Small Cell Lung Cancer</h3><p class="text-gray-400 text-sm"><span class="italic">Chinese Medicine</span> <span class="whitespace-nowrap">（<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 7.4</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">Impact of Traditional Chinese Medicine Therapy Focused on Strengthening the Body in Stage IIIA Non-Small Cell Lung Cancer</h3><p class="text-gray-400 text-sm"><span class="italic">Chinese Medicine</span> <span class="whitespace-nowrap">(<span class="font-mono text-bio-green">JCR Q1</span> · <span class="font-mono text-gray-200">IF 7.4</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-bio-green/40 bg-bio-green/5 text-bio-green">2022</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">Angiogenic Factor-Based Signature Predicts Prognosis and Immunotherapy Response in Non-Small-Cell Lung Cancer</h3><p class="text-gray-400 text-sm"><span class="italic">Frontiers in Genetics</span> <span class="whitespace-nowrap">（<span class="font-mono text-yellow-400">JCR Q2</span> · <span class="font-mono text-gray-200">IF 3.0</span>）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">Angiogenic Factor-Based Signature Predicts Prognosis and Immunotherapy Response in Non-Small-Cell Lung Cancer</h3><p class="text-gray-400 text-sm"><span class="italic">Frontiers in Genetics</span> <span class="whitespace-nowrap">(<span class="font-mono text-yellow-400">JCR Q2</span> · <span class="font-mono text-gray-200">IF 3.0</span>)</span></p></div>
                     </li>
                     <li class="holo-card reveal rounded-xl p-5 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-6">
                         <span class="shrink-0 self-start px-2.5 py-1 rounded-md font-mono text-xs border border-white/20 bg-white/5 text-gray-200">2023</span>
-                        <div><h3 class="text-white font-semibold leading-snug mb-1">基于知识增强的医学语言模型：现状、技术与应用</h3><p class="text-gray-400 text-sm">《医学信息学杂志》<span class="whitespace-nowrap">（中文期刊）</span></p></div>
+                        <div><h3 class="text-white font-semibold leading-snug mb-1">Knowledge-Enhanced Medical Language Models: Current Status, Techniques and Applications <span class="text-gray-400 font-normal" lang="zh-CN">（基于知识增强的医学语言模型：现状、技术与应用）</span></h3><p class="text-gray-400 text-sm"><span class="italic">Journal of Medical Informatics</span> <span lang="zh-CN">《医学信息学杂志》</span> <span class="whitespace-nowrap">(Chinese-language journal)</span></p></div>
                     </li>
                 </ol>
-                <p class="mt-6 text-xs text-gray-400 text-center">注：JCR 分区与影响因子（IF）依据 Journal Citation Reports 2026 年 6 月发布的数据（2025 年度）。</p>
+                <p class="mt-6 text-xs text-gray-400 text-center">Note: JCR quartiles and impact factors (IF) are from the Journal Citation Reports released in June 2026 (2025 data).</p>
             </div>
         </section>
 
@@ -562,15 +562,15 @@
 
                 <div class="relative">
                     <div class="text-xs font-mono text-neon-blue mb-2 tracking-widest">INSTITUTE FOR MEDICAL PHILOSOPHY &amp; FUTURE ARTIFICIAL INTELLIGENCE</div>
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">IMPF-AI · 研究院方向</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">IMPF-AI · Our Direction</h2>
                     <p class="text-gray-400 text-sm mb-2">IMPF-AI explores the intersection of:</p>
                     <p class="font-mono text-sm md:text-base text-white mb-8">Medicine × Artificial Intelligence × Philosophy of Science × Autonomous Discovery</p>
 
-                    <p class="text-gray-300 text-sm md:text-base mb-4">研究院关注的不只是“如何让模型更强”，而是进一步探索：</p>
+                    <p class="text-gray-300 text-sm md:text-base mb-4">We care about more than “making models stronger.” We ask:</p>
                     <ul class="space-y-3 mb-10 text-sm md:text-base">
-                        <li class="flex gap-3 text-gray-200"><i class="fa-solid fa-circle-check text-neon-blue mt-1" aria-hidden="true"></i>如何让人工智能产生更加可信的医学知识；</li>
-                        <li class="flex gap-3 text-gray-200"><i class="fa-solid fa-circle-check text-neon-violet mt-1" aria-hidden="true"></i>如何让计算预测与科学证据保持明确边界；</li>
-                        <li class="flex gap-3 text-gray-200"><i class="fa-solid fa-circle-check text-bio-green mt-1" aria-hidden="true"></i>以及人工智能最终如何成为科学研究中的长期协作者。</li>
+                        <li class="flex gap-3 text-gray-200"><i class="fa-solid fa-circle-check text-neon-blue mt-1" aria-hidden="true"></i>How can AI produce more trustworthy medical knowledge?</li>
+                        <li class="flex gap-3 text-gray-200"><i class="fa-solid fa-circle-check text-neon-violet mt-1" aria-hidden="true"></i>How can computational predictions keep a clear boundary with scientific evidence?</li>
+                        <li class="flex gap-3 text-gray-200"><i class="fa-solid fa-circle-check text-bio-green mt-1" aria-hidden="true"></i>And how can AI ultimately become a long-term collaborator in scientific research?</li>
                     </ul>
 
                     <p class="text-xs font-mono text-gray-400 tracking-widest mb-3">OUR DIRECTION</p>
@@ -590,10 +590,10 @@
 
                     <div class="mt-8 flex flex-col sm:flex-row gap-3">
                         <a href="index.html#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black text-sm font-bold rounded-lg hover:bg-neon-blue transition-colors whitespace-nowrap">
-                            <i class="fa-solid fa-handshake" aria-hidden="true"></i> 合作与加入
+                            <i class="fa-solid fa-handshake" aria-hidden="true"></i> Collaborate &amp; Join
                         </a>
                         <a href="index.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-white/15 text-gray-300 text-sm rounded-lg hover:text-white hover:border-white transition-colors whitespace-nowrap">
-                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> 返回首页
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home
                         </a>
                     </div>
                 </div>
@@ -607,15 +607,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row justify-between items-center gap-6">
             <div class="text-center lg:text-left">
                 <a href="index.html" class="inline-flex items-center group">
-                    <img src="logo-mark.svg" width="36" height="36" alt="" class="w-9 h-9 mr-3 transition-transform duration-300 group-hover:scale-110">
+                    <img src="../logo-mark.svg" width="36" height="36" alt="" class="w-9 h-9 mr-3 transition-transform duration-300 group-hover:scale-110">
                     <span class="font-scifi font-bold text-xl text-white">IMPF<span class="text-neon-blue">-AI</span></span>
                 </a>
                 <p class="text-gray-400 text-[10px] sm:text-xs mt-3 font-mono tracking-wider text-balance">INSTITUTE OF MEDICAL PHILOSOPHY &amp; FUTURE AI</p>
             </div>
             <div class="flex gap-3 text-gray-400">
-                <a href="javascript:void(0)" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="微信公众号"><i class="fa-brands fa-weixin" aria-hidden="true"></i></a>
+                <a href="javascript:void(0)" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="WeChat official account"><i class="fa-brands fa-weixin" aria-hidden="true"></i></a>
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-                <a href="mailto:contact@impf-ai.org" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="联系邮箱"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+                <a href="mailto:contact@impf-ai.org" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-white/10 hover:border-neon-blue/60 hover:text-neon-blue transition-colors" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
             </div>
             <div class="text-gray-400 text-xs font-mono text-center lg:text-right">
                 &copy; 2023–<span id="year">2026</span> IMPF-AI. <span class="whitespace-nowrap">All rights reserved.</span>
@@ -623,7 +623,7 @@
         </div>
     </footer>
 
-    <script src="site.js"></script>
+    <script src="../site.js"></script>
 </body>
 
 </html>
