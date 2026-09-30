@@ -1,10 +1,10 @@
-// 地址栏隐藏 .html：GitHub Pages 同时支持 /research 与 /research.html，这里把旧链接显示为简洁地址
+// Hide ".html" in the address bar: GitHub Pages serves /research and /research.html alike
 if (/^https?:$/.test(location.protocol) && /\.html$/.test(location.pathname)) {
     history.replaceState(null, '', location.pathname.replace(/index\.html$/, '').replace(/\.html$/, '') + location.search + location.hash);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 移动端菜单：点击链接 / 点击外部 / Esc 均可收起
+    // Mobile menu: closes on link click, outside click or Esc
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
     if (toggle && menu) {
@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 导航栏滚动态 + 背景网络随滚动渐暗 (提升正文可读性)
+    // Nav scrolled state + background net dims as you scroll (readability)
     const nav = document.getElementById('site-nav');
     const scrim = document.getElementById('bg-scrim');
-    // 当前板块高亮：取顶部越过视口 45% 的最后一个板块；滚到底时优先刚点击的锚点，否则为最后一个板块
+    // Active section: last section whose top passed 45% of the viewport; at the page bottom prefer the clicked anchor, else the last section
     const sections = ['home', 'research', 'timeline', 'awards', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
-    // 只处理本页锚点链接；跨页链接 (如 research.html) 保持页面自身设置的高亮
+    // Only in-page anchor links; cross-page links keep the highlight set in the markup
     const navLinks = [...document.querySelectorAll('.nav-link[href^="#"]')];
     const updateActive = () => {
         if (!sections.length) return;
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
 
     if ('IntersectionObserver' in window) {
-        // 滚动渐显 (同组元素依次出现)
+        // Scroll reveal (siblings appear in sequence)
         const io = new IntersectionObserver(entries => entries.forEach(e => {
             if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
         }), { rootMargin: '0px 0px -8% 0px' });
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (year) year.textContent = new Date().getFullYear();
 });
 
-// 动态网络背景：页面加载完成后再加载 three.js + Vanta，不阻塞首屏；
-// 开启"减少动态效果"或省流量模式时跳过，保留静态渐变背景
+// Animated net background: load three.js + Vanta after page load so first paint is not blocked;
+// skipped with reduced motion or Save-Data, leaving the static gradient
 (function () {
     const mm = q => window.matchMedia && window.matchMedia(q).matches;
     const hasWebGL = (() => {
@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     minHeight: 200.00,
                     minWidth: 200.00,
                     scale: 1.00,
-                    scaleMobile: 1.50,        // 手机端降低渲染分辨率，省电
-                    color: 0x00f3ff,          // 霓虹蓝
-                    backgroundColor: 0x050b14, // 深背景
+                    scaleMobile: 1.50,        // lower render resolution on phones to save power
+                    color: 0x00f3ff,          // neon blue
+                    backgroundColor: 0x050b14, // deep background
                     points: small ? 6.00 : 10.00,
                     maxDistance: small ? 16.00 : 20.00,
                     spacing: small ? 20.00 : 18.00,

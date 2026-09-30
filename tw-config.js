@@ -9,7 +9,7 @@ if (window.tailwind) tailwind.config = {
             colors: {
                 'neon-blue': '#00f3ff',
                 'neon-purple': '#bc13fe',
-                'neon-violet': '#c84bff', // 小字号紫色 (对比度达标)
+                'neon-violet': '#c84bff', // purple for small text (meets contrast)
                 'bio-green': '#00ff9d',
                 'deep-bg': '#050b14',
                 'glass': 'rgba(13, 25, 48, 0.7)',
